@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 哈哈
+title: 2019-08-04-哈哈.markdown
 date: '2017-09-10 00:00:00 +0300'
 description: >-
   You’ll find this post in your `_posts` directory. Go ahead and edit it and
