@@ -1,0 +1,82 @@
+---
+published: true
+layout: post
+description: 于页面布局，让元素垂直居中，做个总结，总结了五种方法
+img: 1.jpg
+tags:
+  - 页面效果
+  - 布局
+---
+## 关于页面布局，让元素垂直居中，做个总结
+
+元素垂直居中我主要分为两大类：
+- 被居中元素高度固定
+- 被居中元素高度不固定
+
+### 先说子元素固定高度的情况：
+
+先来个定位布局 （兼容IE）
+```
+html:
+<div class='parent'>
+  <div class='child'>child 采用定位布局</div>
+</div>
+
+style:
+.parent{width: 100px;height: 200px;position: relative;}
+.child{width: 100px;height: 50px;position: absolute;margin: auto;top:0;botttom:0;}
+```
+
+定位布局 + transform
+```
+html:
+<div class='parent'>
+  <div class='child'>child 采用定位布局</div>
+</div>
+
+style:
+.parent{width: 100px;height: 200px;position: relative;}
+.child{width: 100px;height: 50px;position: absolute;top: 50%;transform: translate(0,-50%);}
+
+```
+
+定位布局 + 负margin  需要计算 繁琐 （好处是兼容IE）
+```
+html:
+<div class='parent'>
+  <div class='child'>child 采用定位布局</div>
+</div>
+
+style:
+.parent{width: 100px;height: 200px;position: relative;}
+.child{width: 100px;height: 50px;position: absolute;top: 50%;margin: -25px auto 0;}
+```
+
+### 接下来就是子元素不确定高度的情况
+
+table布局（兼容IE）
+```
+html:
+<div class='parent'>
+  <div class='child'>child 采用定位布局</div>
+</div>
+
+style:
+.parent{width: 100px;height: 200px;display: table;}
+.child{width: 50px;display: table-cell;vertical-align: middle;}
+
+```
+
+再来一个
+```
+html:
+<div class='parent'>
+  <div class='child'>child 采用定位布局</div>
+</div>
+
+style:
+.parent{width: 100px;height: 200px;display: -webkit-box;-webkit-box-align: center;}
+
+```
+
+以上。
