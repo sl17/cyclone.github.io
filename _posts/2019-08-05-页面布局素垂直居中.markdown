@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 description: 于页面布局，让元素垂直居中，做个总结，总结了五种方法
 img: 1.jpg
