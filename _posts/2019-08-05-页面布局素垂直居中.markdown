@@ -9,9 +9,12 @@ published: false
 
 ### 先说固定高度：
 先来个定位布局
+```
+<div class='parent'>
+  <div class='child'>child 采用定位布局</div>
+</div>
 
-	
-    <div class='parent'>
-   	<div class='child'>child 采用定位布局</div>
-   </div>
-
+style
+.parent{width: 100px;height: 200px;position: relative;}
+.child{width: 100px;height: 50px;position: absolute;margin: auto;top:0;botttom:0;}
+```
