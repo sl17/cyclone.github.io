@@ -17,12 +17,12 @@ layout: default
       <h3 class="contact-title">Contact me</h3>
       <ul>
         {% if site.social-qq %}
-          <li><a href="QQ:{{ site.social-qq }}" target="_blank"><i class="fa fa-qq" aria-hidden="true"></i></a></li>
+          <li><a href="javascript:alert({{ site.social-qq }});" target="_blank"><i class="fa fa-qq" aria-hidden="true"></i></a></li>
         {% else %}
           <li><a href="javascript:;" target="_blank"><i class="fa fa-qq" aria-hidden="true"></i></a></li>
         {% endif %}
         {% if site.social-comments %}
-          <li><a href="wx:{{ site.social-comments }}" target="_blank"><i class="fa fa-comments" aria-hidden="true"></i></a></li>
+          <li><a href="javascript:alert({{ site.social-comments }});" target="_blank"><i class="fa fa-comments" aria-hidden="true"></i></a></li>
         {% else %}
           <li><a href="javascript:;" target="_blank"><i class="fa fa-comments" aria-hidden="true"></i></a></li>
         {% endif %}
@@ -33,9 +33,9 @@ layout: default
         {% endif %}
         
         {% if site.social-email %}
-          <li class="email"><a href="email:{{site.social-email}}"><i class="fa fa-envelope-o"></i></a></li>
+          <li class="email"><a href="javascript:alert({{site.social-email}});"><i class="fa fa-envelope-o"></i></a></li>
         {% else %}
-          <li class="email"><a href="email:example.david@blog.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+          <li class="email"><a href="javascript:;"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
         {% endif %}
       </ul>
     </section> <!-- End Section Contact -->
