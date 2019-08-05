@@ -1,5 +1,11 @@
 ---
 published: false
+layout: post
+description: 于页面布局，让元素垂直居中，做个总结，总结了五种方法
+img: 1.jpg
+tags:
+  - 页面效果
+  - 布局
 ---
 ## 关于页面布局，让元素垂直居中，做个总结
 
@@ -33,7 +39,8 @@ style:
 .child{width: 100px;height: 50px;position: absolute;top: 50%;transform: translate(0,-50%);}
 
 ```
-定位布局 + 负margin 就不说了 需要计算 繁琐 （好处是兼容IE）
+
+定位布局 + 负margin  需要计算 繁琐 （好处是兼容IE）
 ```
 html:
 <div class='parent'>
@@ -72,5 +79,5 @@ style:
 
 ```
 
-
+以上。
 
