@@ -1,4 +1,4 @@
-title: Hello, world! I'm David Freeman
+title: sl_拾柒
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -12,10 +12,10 @@ site-twitter: #if your site has a twitter account, enter it here
 author: sl_拾柒 # add your name
 author-img: sl17.png # add your photo
 about-author: 当你的生命里出现了生老病死这种事，你就会发现从前夜里的忧伤就是个屁。 # add description
-social-QQ: 77262929 # add your Twitter handle
-social-wx: p_q777 # add your Facebook handle
+social-twitter: 2581005673 # add your Twitter handle
+social-facebook: p_q777 # add your Facebook handle
 social-github: sl17 # add your Github handle
-
+social-linkedin:  # add your linkedin handle
 social-email: leijc_work@163.com # add your Email address
 
 # Disqus
