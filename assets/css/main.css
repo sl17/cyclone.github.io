@@ -892,9 +892,12 @@ table tfoot td {
   position: relative;
   margin: 0 auto;
 }
-
+.wrapper .container{
+  color: #fff;
+  background-color: rgba(0,0,0,.8);
+}
 .post, .article-page {
-  background-color: #fff;
+  background-color: rgba(255,255,255,.9);
 }
 
 ::-moz-selection {
@@ -938,7 +941,7 @@ table tfoot td {
   width: 240px;
   height: 100%;
   padding: 20px 10px;
-  background-color: #ffffff;
+  background-color: rgba(255,255,255,.9);
 }
 
 .about {
