@@ -776,7 +776,7 @@ body {
   font-family: 'Lato', sans-serif;
   color: #515151;
   background-color: #fbfbfb;
-  background-image: url(img/bg/bg1.jpg);
+  background-image: url(../img/bg/bg1.jpg);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
