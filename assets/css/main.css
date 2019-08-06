@@ -776,6 +776,10 @@ body {
   font-family: 'Lato', sans-serif;
   color: #515151;
   background-color: #fbfbfb;
+  background-image: url(img/bg/bg1.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
