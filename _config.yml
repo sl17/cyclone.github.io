@@ -24,6 +24,8 @@ discus-identifier: mr-brown # add your discus identifier
 # Tracker
 analytics: # Google Analytics
 
+excerpt_separator: '\n\n\n\n'
+
 # Build Settings
 markdown: kramdown
 plugins:
