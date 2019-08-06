@@ -896,6 +896,10 @@ table tfoot td {
   color: #fff;
   background-color: rgba(0,0,0,.8);
 }
+.wrapper .container ul{
+   padding: 0 40px;
+   border-radius: 5px;
+}
 .post, .article-page {
   background-color: rgba(255,255,255,.9);
 }
