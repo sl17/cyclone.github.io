@@ -1323,7 +1323,7 @@ a.newer-posts:hover {
 /* - - - - - - - - - - Tag Styles - - - - - - - - - - */
 .blog-tags {
   width: 100%;
-  background-color: #ffffff;
+  background-color: rgba(255,255,255,.9);
   padding: 0 20px 20px;
 }
 
