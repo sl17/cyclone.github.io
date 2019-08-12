@@ -1,5 +1,9 @@
 ---
-published: false
+published: true
+layout: post
+date: '2017-03-25 13:32:20 +0300'
+tags:
+  - JavaScript
 ---
 ### 让ie浏览器兼容input的placeholder属性
 
