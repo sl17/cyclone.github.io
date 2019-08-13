@@ -1,0 +1,27 @@
+---
+published: true
+layout: post
+date: '2017-11-02 13:32:20 +0300'
+tags:
+  - 其他
+---
+### MVC、MVP、MVVM 区别
+
+# MVC：后端思想
+- View传送指令到Controller
+- Controller完成业务逻辑后，要求Model改变状态
+- Model将新的数据发送到View，用户得到反馈
+
+> 所有通信都是单向的
+
+|View视图层|app.js|router.js|controller|Model|
+|用户操作|项目的入口模块，一切的请求，都要进入这里进行处理，注意：app.js并没有路由分法的功能，需要调用router.js进行路由的分法处理|这是路由分发处理模块;
+【为了保证路由模块的职能单一，router.js只负责分发路由,不负责具体业务逻辑的处理】
+如果涉及到了业务逻辑处理操作;router.js就无能为力了,只能调用controller模块进行业务逻辑处理|这是业务逻辑处理层,
+在这个模块中,封装了一些具体业务逻辑处理的逻辑代码,但是,也是为了保证职能单一,此模块只负责处理业务,不负责处理数据的CRUD ,
+如果涉及到了数据的CRUD,需要调用Model层|职能单一，只负责操作数据库，执行对应的Sql语句，进行数据的CRUD
+C :  create   创建            
+R :  read      读取
+U : update   更新           
+D : delete    删除| 
+|v|v|c|c|m|
