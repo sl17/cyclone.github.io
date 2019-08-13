@@ -14,6 +14,8 @@ tags:
 
 > 所有通信都是单向的
 
+![I and My friends]({{site.baseurl}}/assets/img/demo/201908/2019-08-13_163703.png)
+
 |View视图层|app.js|router.js|controller|Model|
 | :----------------: | :------------------- | :--------------------- |:--------------------|:--------------------|
 |用户操作|项目的入口模块，一切的请求，都要进入这里进行处理，注意：app.js并没有路由分法的功能，需要调用router.js进行路由的分法处理|这是路由分发处理模块;<br/>【为了保证路由模块的职能单一，router.js只负责分发路由,不负责具体业务逻辑的处理】<br/>如果涉及到了业务逻辑处理操作;router.js就无能为力了,只能调用controller模块进行业务逻辑处理|这是业务逻辑处理层,在这个模块中,封装了一些具体业务逻辑处理的逻辑代码,但是,也是为了保证职能单一,此模块只负责处理业务,不负责处理数据的CRUD ,<br/>如果涉及到了数据的CRUD,需要调用Model层|职能单一，只负责操作数据库，执行对应的Sql语句，进行数据的CRUD<br/>C :  create创建,<br/>R :  read读取,<br/>U : update   更新,<br/>D : delete删除| 
@@ -28,9 +30,13 @@ MVP模式将Controler改名为Presenter，同时改变了通信方向
 
 >即没有任何主动性，而Presenter非常厚，所有的逻辑都部署在那里。
 
+![I and My friends]({{site.baseurl}}/assets/img/demo/201908/2019-08-13_163812.png)
+
 
 # MVVM：前端思想
 MVVM模式将Presenter改名为ViewModel，基本与MVP模式完全一致,唯一的区别是，它采用双向绑定（data-binding）：View的变动，自动反映在VIewModel，反之亦然
+
+![I and My friends]({{site.baseurl}}/assets/img/demo/201908/2019-08-13_163911.png)
 
 这里面使用的设计模式有：观察者模式（发布订阅模式）、代理模式、工厂模式、单例模式。
 ## 双向绑定
