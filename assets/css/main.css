@@ -1025,8 +1025,8 @@ table tfoot td {
 }
 .about a.tag:hover {
    color: #fff;
-   background: -webkit-linear-gradient(#1f6c85, #001c24);
-   background: linear-gradient(#1f6c85, #001c24);
+   background: -webkit-linear-gradient(-30deg,#1f6c85, #001c24);
+   background: linear-gradient(-30deg,#1f6c85, #001c24);
 }
 .content-box {
   padding: 20px;
