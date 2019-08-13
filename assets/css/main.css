@@ -1023,6 +1023,11 @@ table tfoot td {
   text-transform: uppercase;
   border: 1px solid #263959;
 }
+.about a.tag:hover {
+   color: #fff;
+   background: -webkit-linear-gradient(#1f6c85, #001c24);
+   background: linear-gradient(#1f6c85, #001c24);
+}
 .content-box {
   padding: 20px;
   padding-left: 260px;
