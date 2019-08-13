@@ -1,5 +1,9 @@
 ---
 published: true
+layout: post
+date: '2017-11-02 13:32:20 +0300'
+tags:
+  - 其他
 ---
 ### MVC、MVP、MVVM 区别
 
