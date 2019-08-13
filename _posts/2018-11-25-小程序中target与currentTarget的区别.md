@@ -1,5 +1,9 @@
 ---
-published: false
+published: true
+layout: post
+date: '2018-11-25 13:32:20 +0300'
+tags:
+  - 小程序
 ---
 ### 小程序中target与currentTarget的区别
 
