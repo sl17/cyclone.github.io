@@ -7,13 +7,14 @@ tags:
 ---
 ## cookie和session和sessionStorage和localStore区别
 
-cookie、session区别
+### cookie、session区别
 
 - cookie 存储于浏览器端，而 session 存储于服务端
 - cookie 存储容量有限制，单个cookie 保存数据不能超过4k，且很多浏览器限制一个站点最多保存20个cookie。而对于 session ，其默认大小一般是1024k
 
 
-cookie、sessionStorage和localStore区别
+### cookie、sessionStorage和localStore区别
+
 - localStorage和sessionStorage：可以保存5MB的信息。
 - cookie在浏览器和服务器间来回传递， sessionStorage和localStorage不会。
 - sessionStorage和localStorage的存储空间更大。
