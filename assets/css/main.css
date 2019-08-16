@@ -301,6 +301,21 @@ button:-moz-focusring,
 fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
+/*
+ * Scrollbar style set
+ */
+::-webkit-scrollbar {
+	background:#eee;
+	width: 6px;
+	background-clip: padding-box;
+}
+::-webkit-scrollbar-button {
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
