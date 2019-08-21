@@ -1,5 +1,9 @@
 ---
-published: false
+published: true
+layout: post
+date: '2019-01-21 13:32:20 +0300'
+tags:
+  - Vue
 ---
 ## Vue中computed和watch的区别
 
@@ -55,5 +59,3 @@ var vm = new Vue({
 
 - 如果一个数据依赖于其他数据，那么把这个数据设计为computed的
 - 如果你需要在某个数据变化时做一些事情，使用watch来观察这个数据变化
-
-
