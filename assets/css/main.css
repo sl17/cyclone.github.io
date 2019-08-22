@@ -1561,7 +1561,7 @@ to{right: 13px;top: 35px;}
 }
 .center .j{position: absolute;width: 2px;height: 2px;border: 1px solid rgba(255,255,255,.7);top: 35px;left: 41px;perspective:1500;-webkit-perspective:1500; transform-style: preserve-3d;-webkit-animation: rot 4s infinite linear;animation: rot 4s infinite linear;transform-origin:0 0;}
 
-.center .page{width: 50px;height: 150px;position: absolute;left: -25px;top: 20px;color: #555;background: rgba(0,0,0,.1);backface-visibility: hidden;border-left: 1px solid #ff7301;border-right: 1px solid #e0ff01;border-top: 2px solid #ff7301;;writing-mode: vertical-lr;writing-mode: tb-lr;text-align: center;line-height: 50px;transform-origin:0 0;perspective:1500;
+.center .page{width: 50px;height: 150px;position: absolute;left: -25px;top: 20px;color: #f78b1c;background: rgba(0,0,0,.1);backface-visibility: hidden;border-left: 1px solid #ff7301;border-right: 1px solid #e0ff01;border-top: 2px solid #ff7301;;writing-mode: vertical-lr;writing-mode: tb-lr;text-align: center;line-height: 50px;transform-origin:0 0;perspective:1500;
 -webkit-perspective:1500; transform-style: preserve-3d;}
 .center .page1{transform: translateZ(45px)}
 .center .page1:before,
