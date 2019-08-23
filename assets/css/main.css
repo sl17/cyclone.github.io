@@ -454,7 +454,7 @@ template {
 }
 
 .highlight {
-  background-color: #faf9f9;
+  background-color: rgba(0,0,0,.4);
   -webkit-border-radius: 3px;
           border-radius: 3px;
   margin: 0;
@@ -844,6 +844,7 @@ pre code {
   padding-right: 0;
   padding-left: 0;
   overflow: auto;
+  color: #60adbf;
   white-space: pre-wrap;
   word-wrap: break-word;
   word-break: break-all;
