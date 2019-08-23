@@ -1584,4 +1584,10 @@ from{transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg);left: 34px;}
 85%{left: 38px;}
 to{transform: rotateZ(0deg) rotateX(0deg) rotateY(360deg);left: 34px;}
 }
-
+.wrap-content p a{color:#263959;position:relative; }
+.wrap-content p a:after{content:'';display:block;height: 0px;border-left:8px solid #263959;border-top: 5px solid transparent;border-bottom: 5px solid transparent;position:absolute;top: 5px; right: -15px;animation: aa 1s ease infinite;}
+@keyframes aa{
+	from{right: -10px;}
+	50%{right: -15px;}
+	to{right: -10px;}
+}
