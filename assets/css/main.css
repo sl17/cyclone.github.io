@@ -844,7 +844,7 @@ pre code {
   padding-left: 0;
   overflow: auto;
   color: #60adbf;
-  white-space: pre-wrap;
+  white-space: pre;
   word-wrap: break-word;
   word-break: break-all;
 }
