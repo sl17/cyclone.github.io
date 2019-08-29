@@ -307,10 +307,12 @@ fieldset {
 ::-webkit-scrollbar {
 	background:#eee;
 	width: 6px;
+	height: 6px;
 	background-clip: padding-box;
 }
 ::-webkit-scrollbar-button {
   height: 0px;
+  width: 0px;
 }
 ::-webkit-scrollbar-thumb {
   background: #333;
