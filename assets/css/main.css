@@ -463,12 +463,13 @@ template {
 }
 
 .highlighter-rouge {
-  color: #ce887b;
+  color: #016190;
   font-weight: 400;
-  border: 1px solid #607D8B;
+  font-family: unset;
+  background: rgba(0,0,0,.2);
   -webkit-border-radius: 3px;
           border-radius: 3px;
-  padding: 0.1rem 0.5rem;
+  padding: 0.05rem 0.5rem .1rem;
 }
 
 .highlight .hll {
