@@ -22,7 +22,7 @@ html {
  */
 body {
   margin: 0;
-  cursor: url('../img/GitHub.png');
+  cursor: url('../img/GitHub.png'), auto;
 }
 
 /**
