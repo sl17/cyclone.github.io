@@ -4,12 +4,12 @@
 <body>
   <div class="center">
     <div class="j">
-      <div class="page page1">JAVASCRIPT</div>
-      <div class="page page2">VUE</div>
-      <div class="page page3">REACT</div>
-      <div class="page page4">NODE</div>
-      <div class="page page5">ANGULAR</div>
-      <div class="page page6">TYPESCRIPT</div>
+      <div class="page page1" id="page1">JAVASCRIPT</div>
+      <div class="page page2" id="page2">VUE</div>
+      <div class="page page3" id="page3">REACT</div>
+      <div class="page page4" id="page4">NODE</div>
+      <div class="page page5" id="page5">ANGULAR</div>
+      <div class="page page6" id="page6">TYPESCRIPT</div>
     </div>
   </div>
   <div class="wrapper">
@@ -18,4 +18,24 @@
   
   {% include analytics.html %}
 </body>
+<script>
+  function $(obj){
+    return document.getElementById(obj)
+  } 
+  $('page1').onclick = function(){
+    console.log('page1')
+  }
+  $('page2').onclick = function(){
+    console.log('page2')
+  }
+  $('page3').onclick = function(){
+    console.log('page3')
+  }
+  $('page4').onclick = function(){
+    console.log('page4')
+  }
+  $('page5').onclick = function(){
+    console.log('page5')
+  }
+</script>
 </html>
