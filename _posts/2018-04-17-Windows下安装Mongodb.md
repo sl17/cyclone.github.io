@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 date: '2018-04-17 13:32:20 +0300'
 tags:
@@ -24,3 +24,13 @@ tags:
 
 ### 第六步
 ![第六步](2019-09-17_0006.png)
+
+### 第七步
+![第七步](2019-09-17_0006.png)
+
+在安装路劲下新建文件夹
+- data
+- log
+
+新建文件
+mongo.conf
