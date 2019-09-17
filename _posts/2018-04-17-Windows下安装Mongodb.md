@@ -36,6 +36,8 @@ tags:
 新建文件
 mongo.conf
 
+记事本打开mongo.conf文件 配置一下
+
 ```
 #数据库路径  
 dbpath=C:\mongodb\data\db
