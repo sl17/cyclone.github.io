@@ -35,3 +35,29 @@ tags:
 
 新建文件
 mongo.conf
+
+```
+#数据库路径  
+dbpath=C:\mongodb\data\db
+#日志输出文件路径  
+logpath=C:\mongodb\log\mongo.log
+#错误日志采用追加模式  
+logappend=true  
+#启用日志文件，默认启用  
+journal=true  
+#这个选项可以过滤掉一些无用的日志信息，若需要调试使用请设置为false  
+quiet=true  
+#端口号 默认为27017  
+port=27017
+```
+
+
+
+
+
+
+
+
+
+
+
