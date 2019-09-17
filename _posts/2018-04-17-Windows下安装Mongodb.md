@@ -8,25 +8,28 @@ tags:
 ## Windows下安装Mongodb及配置
 
 ### 第一步
-![第一步](2019-09-17_0001.png)
+![第一步]({{site.baseurl}}/assets/img/demo/201909/2019-09-17_0001.png)
 
 ### 第二步
-![第二步](2019-09-17_0002.png)
+![第二步]({{site.baseurl}}/assets/img/demo/201909/2019-09-17_0002.png)
 
 ### 第三步
-![第三步](2019-09-17_0003.png)
+![第三步]({{site.baseurl}}/assets/img/demo/201909/2019-09-17_0003.png)
 
 ### 第四步
-![第四步](2019-09-17_0004.png)
+![第四步]({{site.baseurl}}/assets/img/demo/201909/2019-09-17_0004.png)
 
 ### 第五步
-![第五步](2019-09-17_0005.png)
+![第五步]({{site.baseurl}}/assets/img/demo/201909/2019-09-17_0005.png)
 
 ### 第六步
-![第六步](2019-09-17_0006.png)
+![第六步]({{site.baseurl}}/assets/img/demo/201909/2019-09-17_0006.png)
 
 ### 第七步
-![第七步](2019-09-17_0006.png)
+![第七步]({{site.baseurl}}/assets/img/demo/201909/2019-09-17_0007.png)
+
+### 第八步
+![第八步]({{site.baseurl}}/assets/img/demo/201909/2019-09-17_0008.png)
 
 在安装路劲下新建文件夹
 - data
