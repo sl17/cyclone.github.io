@@ -90,3 +90,7 @@ MongoDB 服务无法启动
 MongoDB 服务正在启动
 MongoDB 服务已经启动成功
 ```
+
+>`net start mongodb` (开启服务)
+
+>`net stop mongodb` (关闭服务)
