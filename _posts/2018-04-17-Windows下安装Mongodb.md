@@ -67,6 +67,8 @@ port=27017
 
 ### 配置环境变量
 
+![第八步]({{site.baseurl}}/assets/img/demo/201909/2019-09-18_0001.png)
+
 ### 配置window 服务（打开第二个CMD窗口）
 以管理员身份运行cmd
 进入mongodb安装目录下的bin目录
