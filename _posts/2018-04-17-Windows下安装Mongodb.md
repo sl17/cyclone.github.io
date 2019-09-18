@@ -34,7 +34,7 @@ tags:
 ### 第八步
 ![第八步]({{site.baseurl}}/assets/img/demo/201909/2019-09-17_0008.png)
 
-在安装路劲下新建文件夹
+在安装路径下新建文件夹
 - data
  - db
 - log
