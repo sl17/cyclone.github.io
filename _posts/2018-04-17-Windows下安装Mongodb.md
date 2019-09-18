@@ -58,9 +58,33 @@ quiet=true
 #端口号 默认为27017  
 port=27017
 ```
-### 启动MongoDB服务
+### 启动MongoDB服务(打开第一个CMD窗口)
 
 - 打开cmd命令行
 - 进入`G:\mongodb\bin`目录
 - 输入如下的命
 令启动mongodb服务：`mongod --dbpath G:\mongodb\data\db`
+
+### 配置环境变量
+
+### 配置window 服务（打开第二个CMD窗口）
+以管理员身份运行cmd
+进入mongodb安装目录下的bin目录
+输入`mongod --dbpath "G:\mongodb\data\db" --logpath "G:\mongodb\log\mongo.log" --install --serviceName "MongoDB"`
+再输入`net start mongodb`
+出现
+```
+MongoDB 服务正在启动
+MongoDB 服务无法启动
+
+发生服务特定错误： 100.
+请键入......
+```
+> 关闭第一个cmd窗口
+
+再输入`net start mongodb`
+出现
+```
+MongoDB 服务正在启动
+MongoDB 服务已经启动成功
+```
