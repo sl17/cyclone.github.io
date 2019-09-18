@@ -61,6 +61,6 @@ port=27017
 ### 启动MongoDB服务
 
 - 打开cmd命令行
-- 进入G:\mongodb\bin目录
+- 进入`G:\mongodb\bin`目录
 - 输入如下的命
 令启动mongodb服务：`mongod --dbpath G:\mongodb\data\db`
