@@ -7,6 +7,9 @@ tags:
 ---
 ## Windows下安装Mongodb及配置
 
+先在官网下载安装包
+[mongodb下载](https://www.mongodb.com/download-center/community)
+
 ### 第一步
 ![第一步]({{site.baseurl}}/assets/img/demo/201909/2019-09-17_0001.png)
 
@@ -33,7 +36,7 @@ tags:
 
 在安装路劲下新建文件夹
 - data
- - db
+  - db
 - log
 
 新建文件
@@ -43,9 +46,9 @@ mongo.conf
 
 ```
 #数据库路径  
-dbpath=C:\mongodb\data\db
+dbpath=G:\mongodb\data\db
 #日志输出文件路径  
-logpath=C:\mongodb\log\mongo.log
+logpath=G:\mongodb\log\mongo.log
 #错误日志采用追加模式  
 logappend=true  
 #启用日志文件，默认启用  
