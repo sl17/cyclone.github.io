@@ -2,7 +2,7 @@
 published: true
 layout: post
 description: 于页面布局，让元素垂直居中，做个总结，总结了五种方法
-img: 1.jpg
+img: null
 tags:
   - 页面布局
 date: '2018-01-05 13:32:20 +0300'
