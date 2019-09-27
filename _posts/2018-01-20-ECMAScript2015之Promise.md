@@ -109,7 +109,7 @@ var p = Promise.all([p1, p2, p3]);
 ```
 
 #### Promise.race()用法
->一个待定的 Promise 只要给定的迭代中的一个promise解决或拒绝，就采用第一个promise的值作为它的值
+>只要p1、p2、p3之中有一个实例率先改变状态，p的状态就跟着改变。那个率先改变的 Promise 实例的返回值，就传递给p的回调函数,p的状态就会改变Resolved状态
 
 ```
 var p = Promise.race( [p1,p2,p3] )
