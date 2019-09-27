@@ -102,6 +102,7 @@ promise.then((res)=>{
 ### Promise基本用法
 
 #### Promise.all()用法
+>all()接受数组作为参数。p1,p2,p3都是Promise的实例对象，p要变成Resolved状态需要p1，p2，p3状态都是Resolved，如果p1,p2,p3至少有一个状态是Rejected，p就会变成Rejected状态
 
 ```
 var p = Promise.all([p1, p2, p3]);
