@@ -64,6 +64,7 @@ this.get('/toutiao/index?type=top&key=秘钥',{})
  
  
 #### 使用promise
+
 1.比如用户想请求url1接口完后再调url2接口
 
 ```
@@ -89,3 +90,33 @@ promise.then((res)=>{
   })
 })
 ```
+
+### Promise对象
+
+#### Promise有三种状态
+
+- pending: 等待中，或者进行中，表示还没有得到结果
+- resolved: 已经完成，表示得到了我们想要的结果，可以继续往下执行
+- rejected: 也表示得到结果，但是由于结果并非我们所愿，因此拒绝执(用catch捕获异常)
+
+### Promise基本用法
+
+Promise.all()用法
+
+```
+var p = Promise.all([p1, p2, p3]);
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
