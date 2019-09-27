@@ -107,10 +107,11 @@ Promise.all()用法
 var p = Promise.all([p1, p2, p3]);
 ```
 
+Promise.race()用法
 
-
-
-
+```
+var p = Promise.race( [p1,p2,p3] )
+```
 
 
 
