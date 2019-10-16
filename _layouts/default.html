@@ -20,6 +20,22 @@
 </body>
 <script>
   var d = new Date().getDate();
-  document.getElementsByTagName("body")[0].style.backgroundImage  = 'url(/cyclone.github.io/assets/img/bg/bg'+d+'.jpg)'
+  document.getElementsByTagName("body")[0].style.backgroundImage  = 'url(/cyclone.github.io/assets/img/bg/bg'+d+'.jpg)';
+  document.addEventListener('mousemove', showMousePosition, false);
+  let bodyWidth = document.body.clientWidth
+  let bodyHeight = document.body.clientHeight
+  window.onresize = function(){
+    bodyWidth = document.body.clientWidth;
+    bodyHeight = document.body.clientHeight;
+  }
+  let bodyWidthHalf = bodyWidth/2;
+  let bodyHeightHalf = bodyHeight/2;
+  let [diffW,diffH] = [0,0] 
+  function showMousePosition(event) {       
+    diffW = bodyWidthHalf - event.clientX;
+    diffH = bodyHeightHalf - event.clientY;
+    document.getElementsByTagName("body")[0].style.backgroundPositionX= 50 + diffW*0.01 +'%'
+    document.getElementsByTagName("body")[0].style.backgroundPositionY= 50 + diffH*0.01 +'%'
+  }
 </script>
 </html>
