@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 date: '2019-01-02 13:32:20 +0300'
 tags:
