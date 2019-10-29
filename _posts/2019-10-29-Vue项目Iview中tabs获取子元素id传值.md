@@ -10,8 +10,8 @@ published: false
 </Tabs>
 </template>
 <script>
-  {
-    data() {
+  export default {
+    data(){
       return{
         tabs: [
           {
@@ -27,6 +27,11 @@ published: false
             nickname: "Job"
           }
         ],
+      }
+    },
+    methods: {
+      getItem(index) {
+        console.log(index) //111111,222222,333333
       }
     }
   }
