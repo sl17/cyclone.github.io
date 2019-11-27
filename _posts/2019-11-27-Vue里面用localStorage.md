@@ -5,7 +5,7 @@ date: '2019-11-27 13:32:20 +0300'
 tags:
   - Vue
 ---
-Vue里面用localStorage
+## Vue里面用localStorage
 
 ### 写在公共JS里面
 
