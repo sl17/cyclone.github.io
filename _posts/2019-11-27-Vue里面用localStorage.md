@@ -8,6 +8,7 @@ tags:
 Vue里面用localStorage
 
 ### 写在公共JS里面
+
 例如：`utils.js`
 ```
 let storage = {
