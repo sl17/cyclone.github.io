@@ -1,5 +1,9 @@
 ---
-published: false
+published: true
+layout: post
+date: '2019-11-29 13:32:20 +0300'
+tags:
+  - Echarts
 ---
 ## Echart图表legend文字过长显示省略，鼠标移入显示全部
 
@@ -56,3 +60,5 @@ option = {
   ]
 };
 ```
+
+![扫码]({{site.baseurl}}/assets/img/demo/201911/2019-11-29_00001.png)
