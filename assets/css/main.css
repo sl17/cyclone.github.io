@@ -1414,7 +1414,6 @@ border-bottom-right-radius: 50px;
 position: fixed;top: 0;left: 35px;
 -webkit-animation: move 4s infinite linear ; 
 animation: move 4s infinite linear ; z-index: 9999999;
-position: relative;
 }
 .center:before{content: '';width: 2px;height: 3px;border: 1px solid #fff;position: absolute;right: 10px;top: 35px;transform: skew(50deg, 10deg);animation: gs 4s infinite linear;-webkit-border-radius: 2px;border-radius: 2px;}
 .center:after{content: '';width: 1px;height: 3px;border: 1px solid rgba(255,255,255,.7);position: absolute;right: 0;top: 35px;-webkit-transform: skew(-50deg,30deg);transform: skew(-50deg,30deg);-webkit-animation: gs 4s infinite linear;animation: gs 4s infinite linear;-webkit-border-radius: 2px;border-radius: 2px;}
