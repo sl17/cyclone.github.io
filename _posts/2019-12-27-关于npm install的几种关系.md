@@ -1,7 +1,7 @@
 ---
 published: true
 ---
-
+关于npm install的几种关系
 
 #### npm install X:
 
