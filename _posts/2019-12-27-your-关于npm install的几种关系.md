@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 
 
@@ -49,5 +49,3 @@ published: false
 ### 总结
 
 `devDependencies` 节点下的模块是我们在开发时需要用的，你写 ES6 代码，需要babel转换成es5，转换完成后，我们只需要转换后的代码，上线的时候，直接把转换后的代码部署上线，不需要`bebal`了，上线了不需要，这就是`devDependencies`，所以我们可以使用 `-save-dev` 的形式安装。如果你用了 `jQuery`，由于发布之后还是依赖`jQuery`，所以是`dependencies`，所以我们应该使用 -`save` 的形式安装。
-
-
