@@ -1,5 +1,9 @@
 ---
-published: false
+published: true
+layout: post
+date: '2020-09-09 18:36:20 +0300'
+tags:
+  - Vue
 ---
 ## Vue里关于html2canvas组件
 
