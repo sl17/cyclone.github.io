@@ -25,5 +25,5 @@ function unit(num, digits) {
   });
   return str;
 }
-    
+console.log(unit(5225656586423,2))
 ```
