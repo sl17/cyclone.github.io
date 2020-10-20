@@ -3,7 +3,7 @@ published: true
 layout: post
 date: '2020-10-09 16:42:20 +0300'
 tags:
-  - JavaScript
+  - JS操作
 ---
 ## JaveScript操作数字保留几位小数后添加单位
 
