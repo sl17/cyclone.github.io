@@ -1,5 +1,9 @@
 ---
-published: false
+published: true
+layout: post
+date: '2020-10-28 16:02:20 +0300'
+tags:
+  - Css
 ---
 ## A New Post
 
