@@ -1,5 +1,9 @@
 ---
 published: false
+layout: post
+date: '2020-11-27 23:32:20 +0300'
+tags:
+  - TypeScript
 ---
 ### 基础类型
 	let isDon :boolean = false;
