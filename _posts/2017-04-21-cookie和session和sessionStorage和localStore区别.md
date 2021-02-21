@@ -22,4 +22,6 @@ tags:
 - sessionStorage和localStorage各自独立的存储空间。
 - sessionStorage和localStorage仅在客户端（即浏览器）中保存，不参与和服务器的通信
 
+- localStorage生命周期是永久，这意味着除非用户显示在浏览器提供的UI上清除localStorage信息，否则这些信息将永远存在。
+- sessionStorage生命周期为当前窗口或标签页，一旦窗口或标签页被永久关闭了，那么所有通过sessionStorage存储的数据也就被清空了。
 以上
