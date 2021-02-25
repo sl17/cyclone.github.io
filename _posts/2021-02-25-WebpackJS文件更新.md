@@ -1,5 +1,9 @@
 ---
-published: false
+published: true
+layout: post
+date: '2021-02-25 22:22:20 +0300'
+tags:
+  - Webpack
 ---
 ## A New Post
 
