@@ -11,9 +11,13 @@ published: false
 
 ```
 
-#### 截取包前不包后（包含http or https 和 "）
+#### 截取包前不包后（包含并且开始是`http or https` 不包含并且结尾是`"`）
 ```
 '"http:jlkl"'.replace(/(http|https){1}:\/\/[^"'\s]*/,'');//http:jlkl
 
+```
 
+#### 截取包前不包后（包含并且开始是`http or https` 不包含并且结尾是`" or &`）
+```
+'"http:jlkl"'.replace(/(http|https){1}:\/\/[^"'\s|(&)]*/,'');//http:jlkl
 ```
