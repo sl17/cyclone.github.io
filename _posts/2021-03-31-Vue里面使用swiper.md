@@ -53,30 +53,12 @@ export default {
             vm.pageIndex = this.activeIndex;
           },
         },
-      },
-      options: {
-        verticalCentered: true, //定义每一页的内容是否垂直居中
-        afterLoad: this.afterLoad, //滚动到某一屏后的回调函数
-        autoScrolling: true,
-        navigation: true,
-        sectionsColor: [
-          "#41b883",
-          "#ff5f45",
-          "#0798ec",
-          "#fec401",
-          "#1bcee6",
-          "#ee1a59",
-          "#2c3e4f",
-          "#ba5be9",
-          "#b4b8ab",
-        ],
-      },
+      }
     };
   },
   created() {
     vm = this;
   },
-  
   computed: {
     swiper() {
       return this.$refs.mySwiper.$swiper;
