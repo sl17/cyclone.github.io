@@ -65,12 +65,6 @@ export default {
     },
   },
   methods: {
-    // afterLoad: function (origin, destination, direction) {
-    //   console.log(destination.index);
-    // },
-    // gotolastpage(obj) {
-    //   fullpage_api.moveTo(obj, 0);
-    // },
     tabPage(index) {
       // this.$refs.mySwiper.$swiper.slideTo(index, 1000, false)
       // console.log(this.$refs.mySwiper.$swiper)
