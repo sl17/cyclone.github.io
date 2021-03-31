@@ -10,6 +10,7 @@ tags:
 ```
 npm i swiper@5.4.5 vue-awesome-swiper@3 -S
 ```
+swiper.min.css 文件下载到项目里 放在styles文件夹下
 
 main.js
 ```
