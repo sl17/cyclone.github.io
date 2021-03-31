@@ -26,3 +26,17 @@ new Vue({
 ```
 
 组件内
+
+导入
+```
+import "../../styles/swiper.min.css";
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+
+```
+
+```
+components: {
+  Swiper,
+  SwiperSlide,
+},
+```
