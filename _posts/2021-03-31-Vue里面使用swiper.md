@@ -13,6 +13,8 @@ npm i swiper@5.4.5 vue-awesome-swiper@3 -S
 
 main.js
 ```
+import Vue from "vue";
+
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import '../styles/swiper.min.css'
 Vue.use(VueAwesomeSwiper)
