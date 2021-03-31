@@ -15,7 +15,7 @@ main.js
 ```
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import '../styles/swiper.min.css'
-Vue.use(VueAwesomeSwiper, /* { default global options } */)
+Vue.use(VueAwesomeSwiper)
 
 new Vue({
   el: "#app",
