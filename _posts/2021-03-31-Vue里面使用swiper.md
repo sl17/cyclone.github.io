@@ -5,7 +5,7 @@ date: '2021-03-31 18:10:20 +0300'
 tags:
   - Vue
 ---
-## A New Post
+## Vue里面使用swiper
 
 ```
 npm i swiper@5.4.5 vue-awesome-swiper@3 -S
