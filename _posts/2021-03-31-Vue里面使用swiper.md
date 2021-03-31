@@ -76,8 +76,7 @@ export default {
   created() {
     vm = this;
   },
-  mounted() {
-  },
+  
   computed: {
     swiper() {
       return this.$refs.mySwiper.$swiper;
