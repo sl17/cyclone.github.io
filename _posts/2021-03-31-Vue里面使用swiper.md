@@ -27,6 +27,18 @@ new Vue({
 
 组件内
 
+html
+```
+<div class="swiper-container">
+  <swiper ref="mySwiper" :options="swiperOptions">
+    <swiper-slide> slide1 <button @click="tabPage(3)">ch</button></swiper-slide>
+    <swiper-slide> slide2 </swiper-slide>
+    <swiper-slide> slide3 </swiper-slide>
+    <swiper-slide> slide4  <button @click="tabPage(0)">ch</button></swiper-slide>
+  </swiper>
+</div>
+
+```
 导入
 ```
 import "../../styles/swiper.min.css";
