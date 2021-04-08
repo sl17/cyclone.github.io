@@ -44,9 +44,7 @@ tags:
     v2 作用域插槽 v2
     <xmp>
       //父组件
-      <div solt="size" slot-scope="data">
-        data.msg
-      </div>
+      <div solt="size" slot-scope="data">data.msg</div>
       //item子组件
       <slot name="size" :msg="msg"></slot>
     </xmp>
