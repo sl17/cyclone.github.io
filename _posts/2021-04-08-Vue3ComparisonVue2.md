@@ -9,7 +9,7 @@ tags:
 
 
 <details>
-  <summary>生命周期函数1</summary>
+  <summary>生命周期函数</summary>
   <div class="details-box">
 	<xmp>
     <div></div>
