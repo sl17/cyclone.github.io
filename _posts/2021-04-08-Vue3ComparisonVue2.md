@@ -11,15 +11,15 @@ tags:
 <details>
   <summary>生命周期函数</summary>
   <div class="details-box">
-	 ~~beforeCreate~~ -> use setup()
-    ~~created~~ -> use setup()
-    beforeMount -> onBeforeMount
-    mounted -> onMounted
-    beforeUpdate -> onBeforeUpdate
-    updated -> onUpdated
-    beforeDestroy -> onBeforeUnmount
-    destroyed -> onUnmounted
-    errorCaptured -> onErrorCaptured
+    <p><s>beforeCreate</s> -> use setup()</p>
+    <p><s>created</s> -> use setup()</p>
+    <p>beforeMount -> onBeforeMount</p>
+    <p>mounted -> onMounted</p>
+    <p>beforeUpdate -> onBeforeUpdate</p>
+    <p>updated -> onUpdated</p>
+    <p>beforeDestroy -> onBeforeUnmount</p>
+    <p>destroyed -> onUnmounted</p>
+    <p>errorCaptured -> onErrorCaptured</p>
   </div>
 </details>
 
