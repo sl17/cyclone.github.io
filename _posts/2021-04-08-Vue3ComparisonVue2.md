@@ -12,7 +12,17 @@ tags:
   <summary>生命周期函数</summary>
   <div class="details-box">
 	<xmp>
-    <div></div>
+    <div>
+      beforeCreate -> use setup()
+      created -> use setup()
+      beforeMount -> onBeforeMount
+      mounted -> onMounted
+      beforeUpdate -> onBeforeUpdate
+      updated -> onUpdated
+      beforeDestroy -> onBeforeUnmount
+      destroyed -> onUnmounted
+      errorCaptured -> onErrorCaptured
+     </div>
    </xmp>
   </div>
 </details>
@@ -95,5 +105,14 @@ tags:
   <summary>过滤器</summary>
   <div class="details-box">
   	从 Vue 3.0 开始，过滤器已删除，不再支持。
+  </div>
+</details>
+
+<details>
+  <summary>其他</summary>
+  <div class="details-box">
+    <p>Vue 3 的 Template 支持多个根标签，Vue 2 不支持</p>
+    <p>Vue 3 有 createApp()，而 Vue 2 的是 new Vue()</p>
+   
   </div>
 </details>
