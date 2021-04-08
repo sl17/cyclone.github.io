@@ -91,6 +91,7 @@ tags:
     </template>
    </xmp>
    插槽的缩写
-   
+   可以把参数之前的所有内容 (v-slot:) 替换为字符 #。例如 v-slot:header 可以被重写为 #header
+	v-slot:后面必须有值，不可写成#="{data}"
   </div>
 </details>
