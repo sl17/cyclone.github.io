@@ -78,7 +78,17 @@ tags:
     </current-user>
    </xmp>
     
-   解构写法 v3
-   
+   v3 解构写法
+   <xmp>
+    <template v-slot:default="{msg}"> //解构
+      <div>{{msg}}</div>
+    </template>
+   </xmp>
+   v-slot 的解构还提供 重命名的写法
+   <xmp>
+    <template v-slot:default="{ msg : size }"> //解构
+      <div>{{size}}</div>
+    </template>
+   </xmp>
   </div>
 </details>
