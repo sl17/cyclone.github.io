@@ -21,21 +21,12 @@ tags:
 <details>
   <summary>插槽</summary>
   <div class="details-box">
-    萨达撒所萨达按时萨达萨达啊
+    默认插槽
 	<xmp>
     //父组件
-    <template>
-     <item>
-      <div>装一杯牛奶</div>
-     <item>
-    </template>
+    <div>装一杯牛奶</div>
     //item子组件
-    <template>
-     <div>
-      <slot></slot>
-      <h1>我是杯子</h1>
-     </div>
-    </template>
+    <slot></slot>
    </xmp>
   </div>
 </details>
