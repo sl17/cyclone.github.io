@@ -9,11 +9,35 @@ tags:
 
 
 <details>
-<summary>生命周期函数1</summary>
-	<div class="details-box">
-	萨达撒所萨达按时萨达萨达啊
+  <summary>生命周期函数1</summary>
+  <div class="details-box">
+    萨达撒所萨达按时萨达萨达啊
 	<xmp>
     <div>is div</div>
+   </xmp>
+  </div>
+</details>
+
+<details>
+  <summary>插槽</summary>
+  <div class="details-box">
+    萨达撒所萨达按时萨达萨达啊
+	<xmp>
+    //父组件
+    <template>
+     <item>
+      <div>装一杯牛奶</div>
+     <item>
+    </template>
+
+
+    //item子组件
+    <template>
+     <div>
+      <slot></slot>
+      <h1>我是杯子</h1>
+     </div>
+    </template>
    </xmp>
   </div>
 </details>
