@@ -12,10 +12,8 @@ tags:
 <summary>生命周期函数</summary>
   <div class="details-box">
     萨达撒所萨达按时萨达萨达啊
-    <pre>
-      <code>
-      	<div>is div</div>
-      </code>
-    </pre>
+    ```
+    <div>is div</div>
+    ```
   </div>
 </details>
