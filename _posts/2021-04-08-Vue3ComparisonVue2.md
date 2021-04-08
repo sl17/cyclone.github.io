@@ -28,12 +28,43 @@ tags:
     //item子组件
     <slot></slot>
    </xmp>
+    
     默认插槽 v3
+    原来的solt属性可以定义在任何元素上，现在v-solt只能是template元素上
 	<xmp>
     //父组件
-    <div>装一杯牛奶</div>
+    // v-slot:default可以不加,只能定义在template上
+    <template v-slot:default> 
+      <div>装一杯牛奶</div>
+    </template>
     //item子组件
     <slot></slot>
+   </xmp>
+    
+   作用域插槽 v2
+   <xmp>
+    //父组件
+    <div solt="size" slot-scope="data">
+      {{data.msg}}
+    </div>
+    //item子组件
+    <slot name="size" :msg="msg"></slot>
+   </xmp>
+    
+   作用域插槽 v3
+   <xmp>
+    //父组件
+    <template v-slot:default="data"> //具名写法
+      <div>
+        {{data.msg}}   
+      </div>
+    </template>
+     or
+    <template v-slot="data">
+     <div > {{data.msg}} </div>
+    </template>	
+    //item子组件
+    <slot name="size" :msg="msg"></slot >
    </xmp>
   </div>
 </details>
