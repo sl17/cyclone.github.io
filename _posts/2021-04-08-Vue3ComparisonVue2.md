@@ -11,9 +11,8 @@ tags:
 <details>
   <summary>生命周期函数1</summary>
   <div class="details-box">
-    萨达撒所萨达按时萨达萨达啊
 	<xmp>
-    <div>is div</div>
+    <div></div>
    </xmp>
   </div>
 </details>
