@@ -41,7 +41,7 @@ tags:
     <slot></slot>
    </xmp>
     
-   作用域插槽 v2
+   v2 作用域插槽 v2 
    <xmp>
     //父组件
     <div solt="size" slot-scope="data">
@@ -51,7 +51,7 @@ tags:
     <slot name="size" :msg="msg"></slot>
    </xmp>
     
-   作用域插槽 v3
+   v3 作用域插槽 
    <xmp>
     //父组件
     <template v-slot:default="data"> //具名写法
