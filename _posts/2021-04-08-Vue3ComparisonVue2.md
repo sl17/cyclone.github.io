@@ -53,11 +53,11 @@ tags:
     <xmp>
       //父组件
       <template v-slot:default="data"> //具名写法
-        <div>data.msg</div>
+        <div>{{data.msg}}</div>
       </template>
       or
       <template v-slot="data">
-        <div> data.msg </div>
+        <div> {{data.msg}} </div>
       </template>
       //item子组件
       <slot name="size" :msg="msg"></slot>
@@ -77,13 +77,13 @@ tags:
     v3 解构写法
     <xmp>
       <template v-slot:default="{msg}"> //解构
-        <div>msg</div>
+        <div>{{msg}}</div>
       </template>
     </xmp>
     v-slot 的解构还提供 重命名的写法
     <xmp>
       <template v-slot:default="{ msg : size }"> //解构
-        <div>size</div>
+        <div>{{size}}</div>
       </template>
     </xmp>
     插槽的缩写
