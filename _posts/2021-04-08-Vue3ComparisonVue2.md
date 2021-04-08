@@ -120,7 +120,7 @@ tags:
 <details>
   <summary>setup</summary>
   <div class="details-box">
-    <p>Vue 3 的 Template 支持多个根标签，Vue 2 不支持</p>
+    <p>执行时机</p>
     <p>Vue 3 有 createApp()，而 Vue 2 的是 new Vue()</p>
    
   </div>
