@@ -21,7 +21,7 @@ tags:
 <details>
   <summary>插槽</summary>
   <div class="details-box">
-    默认插槽 v2
+    v2 默认插槽 
 	<xmp>
     //父组件
     <div>装一杯牛奶</div>
@@ -29,7 +29,7 @@ tags:
     <slot></slot>
    </xmp>
     
-    默认插槽 v3
+   v3  默认插槽 
     原来的solt属性可以定义在任何元素上，现在v-solt只能是template元素上
 	<xmp>
     //父组件
