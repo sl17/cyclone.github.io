@@ -95,3 +95,80 @@ tags:
 	v-slot:后面必须有值，不可写成#="{data}"
   </div>
 </details>
+<details>
+ <summary>插槽</summary>
+ <div class="details-box">
+  v2 默认插槽
+  <xmp>
+   //父组件
+   <div>装一杯牛奶</div>
+   //item子组件
+   <slot></slot>
+  </xmp>
+
+  v3 默认插槽
+  原来的solt属性可以定义在任何元素上，现在v-solt只能是template元素上
+  <xmp>
+   //父组件
+   // v-slot:default可以不加,只能定义在template上
+   <template v-slot:default>
+    <div>装一杯牛奶</div>
+   </template>
+   //item子组件
+   <slot></slot>
+  </xmp>
+
+  v2 作用域插槽 v2
+  <xmp>
+   //父组件
+   <div solt="size" slot-scope="data">
+    {{data.msg}}
+   </div>
+   //item子组件
+   <slot name="size" :msg="msg"></slot>
+  </xmp>
+
+  v3 作用域插槽
+  <xmp>
+   //父组件
+   <template v-slot:default="data"> //具名写法
+    <div>
+     {{data.msg}}
+    </div>
+   </template>
+   or
+   <template v-slot="data">
+    <div> {{data.msg}} </div>
+   </template>
+   //item子组件
+   <slot name="size" :msg="msg"></slot>
+  </xmp>
+  当为独占默认插槽时，v-solt可以省略default不写
+  注意默认插槽的缩写语法不能和具名插槽混用，因为它会导致作用域不明确下面是官方的例子
+  <!-- 无效，会导致警告 -->
+  <xmp>
+   <current-user v-slot="slotProps">
+    {{ slotProps.user.firstName }}
+    <template v-slot:other="otherSlotProps">
+     slotProps is NOT available here
+    </template>
+   </current-user>
+  </xmp>
+
+  v3 解构写法
+  <xmp>
+   <template v-slot:default="{msg}"> //解构
+    <div>{{msg}}</div>
+   </template>
+  </xmp>
+  v-slot 的解构还提供 重命名的写法
+  <xmp>
+   <template v-slot:default="{ msg : size }"> //解构
+    <div>{{size}}</div>
+   </template>
+  </xmp>
+  插槽的缩写
+  可以把参数之前的所有内容 (v-slot:) 替换为字符 #。例如 v-slot:header 可以被重写为 #header
+  v-slot:后面必须有值，不可写成#="{data}"
+ </div>
+</details>
