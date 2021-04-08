@@ -1485,6 +1485,8 @@ to{transform: rotateZ(0deg) rotateX(0deg) rotateY(360deg);left: 34px;}
 }
 
 /* - - - - - - - - - - Media Styles - - - - - - - - - - */
+/* new */
+summary{outline: none;}
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
   .post {
