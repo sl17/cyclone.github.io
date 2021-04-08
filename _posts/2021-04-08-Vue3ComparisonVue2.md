@@ -21,7 +21,14 @@ tags:
 <details>
   <summary>插槽</summary>
   <div class="details-box">
-    默认插槽
+    默认插槽 v2
+	<xmp>
+    //父组件
+    <div>装一杯牛奶</div>
+    //item子组件
+    <slot></slot>
+   </xmp>
+    默认插槽 v3
 	<xmp>
     //父组件
     <div>装一杯牛奶</div>
