@@ -92,3 +92,9 @@ tags:
   </div>
 </details>
 
+<details>
+  <summary>过滤器</summary>
+  	从 Vue 3.0 开始，过滤器已删除，不再支持。
+</details>
+
+
