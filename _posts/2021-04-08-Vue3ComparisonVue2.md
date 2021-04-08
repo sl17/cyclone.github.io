@@ -139,6 +139,7 @@ tags:
     </code></pre>
     
     2、context
+    
     setup 函数的第二个形参是一个上下文对象，这个上下文对象中包含了一些有用的属性，这些属性在 vue 2.x 中需要通过 this 访问到，在 vue 3.x 中，它们的访问方式如下：
     <pre><code>
     	const MyComponent = {
