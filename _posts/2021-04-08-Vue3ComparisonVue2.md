@@ -29,7 +29,6 @@ tags:
       <div>装一杯牛奶</div>
      <item>
     </template>
-
     //item子组件
     <template>
      <div>
