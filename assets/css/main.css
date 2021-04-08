@@ -1488,7 +1488,7 @@ to{transform: rotateZ(0deg) rotateX(0deg) rotateY(360deg);left: 34px;}
 /* new */
 summary{outline: none;}
 details .details-box{text-indent: 2em;}
-xmp{background:rgba(0,0,0,.3);border-radius: 5px;color:#0089ff;font-family: unset;font-size: 15px;margin-left: 2em;}
+xmp{background:rgba(0,0,0,.3);border-radius: 5px;color:#2d07ff;font-family: unset;font-size: 15px;margin-left: 2em;}
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
   .post {
