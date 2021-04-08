@@ -7,13 +7,15 @@ tags:
 ---
 ## 简单介绍vue2和vue3的对比变化
 
-### test
 
 <details>
-<summary>展开查看</summary>
+<summary>生命周期函数</summary>
   <div class="details-box">
-  萨达撒所萨达按时萨达萨达啊
-  <pre><code>
-System.out.println("Hello to see U!");
-</code></pre></div>
+    萨达撒所萨达按时萨达萨达啊
+    <pre>
+      <code>
+      	<div>is div</div>
+      </code>
+    </pre>
+  </div>
 </details>
