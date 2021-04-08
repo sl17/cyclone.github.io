@@ -11,19 +11,15 @@ tags:
 <details>
   <summary>生命周期函数</summary>
   <div class="details-box">
-	<xmp>
-    <div>
-      ~~beforeCreate~~ -> use setup()
-      ~~created~~ -> use setup()
-      beforeMount -> onBeforeMount
-      mounted -> onMounted
-      beforeUpdate -> onBeforeUpdate
-      updated -> onUpdated
-      beforeDestroy -> onBeforeUnmount
-      destroyed -> onUnmounted
-      errorCaptured -> onErrorCaptured
-     </div>
-   </xmp>
+	 ~~beforeCreate~~ -> use setup()
+    ~~created~~ -> use setup()
+    beforeMount -> onBeforeMount
+    mounted -> onMounted
+    beforeUpdate -> onBeforeUpdate
+    updated -> onUpdated
+    beforeDestroy -> onBeforeUnmount
+    destroyed -> onUnmounted
+    errorCaptured -> onErrorCaptured
   </div>
 </details>
 
