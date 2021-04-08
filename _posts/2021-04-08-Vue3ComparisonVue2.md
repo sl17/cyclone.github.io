@@ -68,6 +68,17 @@ tags:
    </xmp>
    当为独占默认插槽时，v-solt可以省略default不写
 	注意默认插槽的缩写语法不能和具名插槽混用，因为它会导致作用域不明确下面是官方的例子
+   <!-- 无效，会导致警告 -->
+   <xmp>
+    <current-user v-slot="slotProps">
+      {{ slotProps.user.firstName }}
+      <template v-slot:other="otherSlotProps">
+        slotProps is NOT available here
+      </template>
+    </current-user>
+   </xmp>
     
+   解构写法 v3
+   
   </div>
 </details>
