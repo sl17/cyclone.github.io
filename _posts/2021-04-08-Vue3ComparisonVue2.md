@@ -121,7 +121,37 @@ tags:
   <summary>setup</summary>
   <div class="details-box">
     <p>执行时机</p>
-    <p>Vue 3 有 createApp()，而 Vue 2 的是 new Vue()</p>
+     setup 函数会在 beforeCreate 之后、created 之前执行
+    <p>接收传参数据</p>
+     1、props
+    <pre><code>
+    	export default {
+        props: {
+          msg: {
+            type: String,
+            default: () => {}
+          }
+        },
+        setup(props) {
+          console.log(props);
+        }
+      }
+    </code></pre>
+    
+    2、context
+    setup 函数的第二个形参是一个上下文对象，这个上下文对象中包含了一些有用的属性，这些属性在 vue 2.x 中需要通过 this 访问到，在 vue 3.x 中，它们的访问方式如下：
+    <pre><code>
+    	const MyComponent = {
+        setup(props, context) {
+          context.attrs
+          context.slots
+          context.parent
+          context.root
+          context.emit
+          context.refs
+        }
+      }
+    </code></pre>
    
   </div>
 </details>
