@@ -93,7 +93,7 @@ tags:
 
 <details>
   <summary>过滤器</summary>
+  <div class="details-box">
   	从 Vue 3.0 开始，过滤器已删除，不再支持。
+  </div>
 </details>
-
-
