@@ -55,9 +55,7 @@ tags:
     <xmp>
       //父组件
       <template v-slot:default="data"> //具名写法
-        <div>
-          data.msg
-        </div>
+        <div>data.msg</div>
       </template>
       or
       <template v-slot="data">
