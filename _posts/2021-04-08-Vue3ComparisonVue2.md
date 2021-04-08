@@ -13,8 +13,8 @@ tags:
   <div class="details-box">
 	<xmp>
     <div>
-      beforeCreate -> use setup()
-      created -> use setup()
+      ~~beforeCreate~~ -> use setup()
+      ~~created~~ -> use setup()
       beforeMount -> onBeforeMount
       mounted -> onMounted
       beforeUpdate -> onBeforeUpdate
