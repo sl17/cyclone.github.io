@@ -1487,8 +1487,8 @@ to{transform: rotateZ(0deg) rotateX(0deg) rotateY(360deg);left: 34px;}
 /* - - - - - - - - - - Media Styles - - - - - - - - - - */
 /* new */
 summary{outline: none;}
-details .details-box{text-indent: 2em;}
-xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: unset;font-size: 15px;margin-left: 2em;}
+details .details-box{margin-left: 2em;}
+xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: unset;font-size: 15px;margin-left: 1em;}
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
   .post {
