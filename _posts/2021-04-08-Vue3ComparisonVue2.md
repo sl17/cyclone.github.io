@@ -11,7 +11,8 @@ tags:
 
 <details>
 <summary>展开查看</summary>
-<pre><code>
+  萨达撒所萨达按时萨达萨达啊
+<code>
 System.out.println("Hello to see U!");
-</code></pre>
+</code>
 </details>
