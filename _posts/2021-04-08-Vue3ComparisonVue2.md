@@ -90,5 +90,7 @@ tags:
       <div>{{size}}</div>
     </template>
    </xmp>
+   插槽的缩写
+   
   </div>
 </details>
