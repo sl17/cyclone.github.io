@@ -835,6 +835,7 @@ blockquote {
 }
 
 pre {
+  margin: 0;
   padding: 5px 2rem;
   overflow: auto;
   white-space: pre-wrap;
