@@ -30,7 +30,6 @@ tags:
      <item>
     </template>
 
-
     //item子组件
     <template>
      <div>
