@@ -841,6 +841,8 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
   word-break: break-all;
+  background: rgba(0,0,0,.5);
+  border-radius: 5px;
 }
 
 pre code {
@@ -848,10 +850,12 @@ pre code {
   padding-right: 0;
   padding-left: 0;
   overflow: auto;
-  color: #60adbf;
+  color: #50deff;
   white-space: pre;
   word-wrap: break-word;
   word-break: break-all;
+  font-family: system-ui;
+  font-size: 14px;
 }
 
 table {
