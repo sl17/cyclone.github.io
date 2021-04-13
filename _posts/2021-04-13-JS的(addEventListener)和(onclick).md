@@ -21,3 +21,13 @@ window.onresize = none;
 - addEventListener对任何DOM都是有效的，而onclick仅限于HTML
 - addEventListener可以控制listener的触发阶段,（捕获/冒泡）。对于多个相同的事件处理器，不会重复触发，不需要手动使用removeEventListener清除;
 - IE9使用attachEvent和detachEvent;
+
+- 解绑
+```
+function resizeWindow(event){
+  event.preventDefault();
+  console.log('调整浏览器窗口大小时触发resize事件')
+}
+window.addEventListener('resize', resizeWindow, false);
+window.removeEventListener('resize', resizeWindow, false);
+```
