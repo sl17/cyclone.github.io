@@ -37,6 +37,7 @@ window.removeEventListener('resize', resizeWindow, false);
 ```
 
 ## 扩展
+JQ中的on()和click()区别
 
 - `click()`属于静态加载，当页面加载完，就不在为新增加的元素添加点击事件。
 
