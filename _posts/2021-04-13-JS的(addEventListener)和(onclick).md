@@ -1,5 +1,9 @@
 ---
 published: true
+layout: post
+date: '2021-04-13 13:32:20 +0300'
+tags:
+  - JavaScript
 ---
 ## JS事件绑定(addEventListener)和普通事件(onclick)有什么区别,扩展jq中的on()和click()区别；
 
