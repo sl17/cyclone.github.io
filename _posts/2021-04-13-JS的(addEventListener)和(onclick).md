@@ -1,10 +1,19 @@
 ---
-published: false
+published: true
 ---
 ## JS事件绑定(addEventListener)和普通事件(onclick)有什么区别
 
 ### 普通事件（onclick）
 - 普通事件就是直接触发事件，同一时间只能指向唯一对象，所以会被覆盖掉。
+
+- 解绑
+```
+window.onresize = function(event){
+    event.preventDefault();
+    console.log('调整浏览器窗口大小时触发resize事件');
+}
+window.onresize = none;
+```
 
 ### 事件绑定（addEventListener）
 
