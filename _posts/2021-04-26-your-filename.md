@@ -1,7 +1,7 @@
 ---
 published: false
 ---
-## A New Post
+## vue封装http请求
 
 #### request.js
 
@@ -74,4 +74,36 @@ function decorateUrl(url, getBody={}) {
 module.exports = {
   decorateUrl
 };
+```
+
+#### 使用
+
+```
+//post
+async getActivityData() {
+  let data = {};
+  const result = await this.$req.post({
+    url: "/api/account/auth/my/account/entry/search",
+    data,
+  });
+  if (result.success) {
+    //处理
+  }
+},
+//get
+async showinfo(obj) {
+  this.content = obj;
+  const result = await this.$req.get({
+    url: "/ck/message/add?id=" + obj.id,
+  });
+  if (result.success) {
+		//处理
+  }
+},
+```
+
+#### web.js
+```
+import {request} from './request.js';
+Vue.prototype.$req=request;
 ```
