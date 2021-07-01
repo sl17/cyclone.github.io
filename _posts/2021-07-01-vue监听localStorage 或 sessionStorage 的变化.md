@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: '2021-07-01 10:32:20 +0300'
+date: '2021-07-01 13:32:20 +0300'
 tags:
   - Vue
 ---
