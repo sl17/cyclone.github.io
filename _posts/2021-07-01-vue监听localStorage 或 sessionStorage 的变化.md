@@ -1,5 +1,9 @@
 ---
 published: true
+layout: post
+date: '2021-07-01 10:32:20 +0300'
+tags:
+  - Vue
 ---
 ## vue监听localStorage 或 sessionStorage 的变化
 
