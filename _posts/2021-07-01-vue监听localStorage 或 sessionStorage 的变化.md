@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## vue监听localStorage 或 sessionStorage 的变化
 
@@ -63,4 +63,3 @@ created() {
 	this.$addStorageEvent(1, "token", '');
 },
 ```
-
