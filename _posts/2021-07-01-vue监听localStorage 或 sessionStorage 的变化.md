@@ -16,33 +16,21 @@ tags:
  * @param { string } data 要存储的数据
 */ 
 Vue.prototype.$addStorageEvent = function (type, key, data) {
-    if (type === 1) {
-        // 创建一个StorageEvent事件
-        var newStorageEvent = document.createEvent('StorageEvent');
-        const storage = {
-            setItem: function (k, val) {
+    var newStorageEvent = document.createEvent('StorageEvent');
+    const storage = {
+        setItem: function (k, val) {
+            if(type === 1) {
                 localStorage.setItem(k, val);
-                // 初始化创建的事件
-                newStorageEvent.initStorageEvent('setItem', false, false, k, null, val, null, null);
-                // 派发对象
-                window.dispatchEvent(newStorageEvent);
-            }
-        }
-        return storage.setItem(key, data);
-    } else {
-        // 创建一个StorageEvent事件
-        var newStorageEvent = document.createEvent('StorageEvent');
-        const storage = {
-            setItem: function (k, val) {
+            }else{
                 sessionStorage.setItem(k, val);
-                // 初始化创建的事件
-                newStorageEvent.initStorageEvent('setItem', false, false, k, null, val, null, null);
-                // 派发对象
-                window.dispatchEvent(newStorageEvent);
             }
+            // 初始化创建的事件
+            newStorageEvent.initStorageEvent('setItem', false, false, k, null, val, null, null);
+            // 派发对象
+            window.dispatchEvent(newStorageEvent);
         }
-        return storage.setItem(key, data);
     }
+    return storage.setItem(key, data);
 }
 ```
 
