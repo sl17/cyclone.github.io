@@ -1,0 +1,35 @@
+---
+published: true
+layout: post
+date: '2021-09-06 19:03:20 +0300'
+tags:
+  - JavaScript
+---
+## js数组对象去重
+
+
+
+```
+arr=[
+    {"index":0,"min":19,"num":11},
+	{"index":1,"min":8,"num":11},
+	{"index":2,"min":3,"num":33},
+	{"index":3,"min":3,"num":27},
+	{"index":4,"min":14,"num":44},
+	{"index":5,"min":25,"num":11}
+]
+
+let obj = {};
+let peon = arr.reduce((cur,next) => {
+    obj[next.num] ? "" : obj[next.num] = true && cur.push(next);
+    return cur;
+},[]) 
+console.log(peon);    
+[
+    {"index":0,"min":19,"num":11},
+	{"index":2,"min":3,"num":33},
+	{"index":3,"min":3,"num":27},
+	{"index":4,"min":14,"num":44},
+]
+
+```
