@@ -1,0 +1,135 @@
+---
+published: true
+layout: post
+date: '2021-10-12 10:15:20 +0300'
+tags:
+  - Vue
+---
+## element-ui合并相同名称el-table单元格 
+
+
+
+```
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .hr-solid-content {
+      color: #a2a9b6;
+      border: 0;
+      font-size: 12px;
+      padding: 1em 0;
+      position: relative;
+    }
+
+    .hr-solid-content::before {
+      content: attr(data-content);
+      position: absolute;
+      padding: 0 1ch;
+      line-height: 1px;
+      border: solid #d0d0d5;
+      border-width: 0 99vw;
+      width: fit-content;
+      /* for 不支持fit-content浏览器 */
+      white-space: nowrap;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- 引入组件库 -->
+</head>
+
+<body>
+  <hr class="hr-solid-content" data-content="分隔线">
+  <hr class="hr-solid-content" data-content="文字自适应，背景透明">
+  <div id="app">
+    <el-table :data="tableData" :span-method="objectSpanMethod" border style="width: 100%; margin-top: 20px">
+      <el-table-column prop="id" label="ID" width="180"></el-table-column>
+      <el-table-column prop="name" label="姓名"></el-table-column>
+      <el-table-column prop="amount1" label="数值 1（元）"></el-table-column>
+      <el-table-column prop="amount2" label="数值 2（元）"></el-table-column>
+      <el-table-column prop="amount3" label="数值 3（元）"></el-table-column>
+    </el-table>
+  </div>
+</body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: function () {
+      return {
+        tableData: [
+          { id: '12987122', name: '王小虎1', amount1: '234', amount2: '3.2', amount3: 10 },
+          { id: '12987123', name: '王小虎1', amount1: '165', amount2: '4.43', amount3: 12 },
+          { id: '12987124', name: '王小虎1', amount1: '324', amount2: '1.9', amount3: 9 },
+          { id: '12987125', name: '王小虎2', amount1: '621', amount2: '2.2', amount3: 17 },
+          { id: '12987126', name: '王小虎2', amount1: '539', amount2: '4.1', amount3: 15 },
+          { id: '12987126', name: '王小虎8', amount1: '539', amount2: '4.1', amount3: 15 },
+          { id: '12987126', name: '王小虎1', amount1: '539', amount2: '4.1', amount3: 15 }]
+      }
+    },
+    mounted() {
+      this.arrSort()
+    },
+    methods: {
+      // 参考 https://blog.csdn.net/weixin_50790427/article/details/117082958
+      //如果数组是乱序的需要排序
+      arrSort() {
+        this.tableData.sort((a, b) => {
+          if (a['name'] != b["name"]) {
+            return a['name'].localeCompare(b['name'])
+          }
+        })
+      },
+      //数组排序后用这个方法
+      filtterData(arr) {
+        let oneArr = [], count = 0;
+        arr.forEach((item, index) => {
+          // 数组第0个 肯定有 所以直接push 0,
+          if (index === 0) {
+            oneArr.push(1)
+          } else {
+            // 当有相同项的时候 数组的合并项+1 同时push 0 (占位),
+            if (item.name === arr[index - 1].name) {
+              oneArr[count] += 1;
+              oneArr.push(0)
+            } else {//否则的话就直接 push 1 ,并且把下一次数组下标更新
+              oneArr.push(1);
+              count = index;
+            }
+          }
+        });
+        return oneArr
+      },
+      // arraySpanMethod({ row, column, rowIndex, columnIndex }) {
+      //   if (rowIndex % 2 === 0) {
+      //     if (columnIndex === 0) {
+      //       return [1, 2];
+      //     } else if (columnIndex === 1) {
+      //       return [0, 0];
+      //     }
+      //   }
+      // },
+
+      objectSpanMethod({ row, column, rowIndex, columnIndex }) {
+        if (columnIndex === 0) {
+          const _row = (this.filtterData(this.tableData))[rowIndex];
+          const _col = _row > 0 ? 1 : 0
+          return {
+            rowspan: _row,
+            colspan: _col
+          };
+        }
+      }
+    }
+  })
+</script>
+
+</html>
+```
