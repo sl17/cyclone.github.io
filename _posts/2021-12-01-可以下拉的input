@@ -1,0 +1,35 @@
+---
+published: true
+layout: post
+date: '2021-12-01 10:47:20 +0300'
+tags:
+  - Css
+---
+## 可以下拉的input
+
+
+
+```
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>可以下拉的input</title>
+</head>
+<body>
+	<input type="text" list="ss">
+	<datalist id="ss">
+		<option value="1">1</option>
+		<option value="1">1</option>
+		<option value="1">1</option>
+		<option value="1">1</option>
+	</datalist>
+</body>
+<script>
+	
+</script>
+
+</html>
+```
