@@ -1,0 +1,33 @@
+---
+published: true
+layout: post
+date: '2022-01-13 13:33:20 +0300'
+tags:
+  - JavaScript
+---
+## js对象去重
+
+
+
+
+```
+let arr = [
+{name: '11',height: 200},
+{name: '12',height: 200},
+{name: '13',height: 210},
+{name: '14',height: 220},
+{name: '15',height: 230},
+]
+let obj = {};
+let newArr = arr.reduce((cur,next) => {
+    obj[next.height] ? "" : obj[next.height] = true && cur.push(next);
+    return cur;
+},[]) 
+console.log(newArr)
+/*
+{name: '11',height: 200},
+{name: '13',height: 210},
+{name: '14',height: 220},
+{name: '15',height: 230},
+*/
+```
