@@ -69,8 +69,14 @@
   })
   btn.addEventListener('click', function(){
       music.setAttribute('src',src);
-      music.play();
-      span.className = 'stop';
+      if(isT%2==0){
+          music.play();
+          span.className = 'stop';
+      }else{
+          music.pause();
+          span.className = 'play';
+      }
+      isT++
   })
  
 </script>
