@@ -60,6 +60,8 @@
     src = '/cyclone.github.io/assets/music/'+musicArr[num]+'.mp3';
     music.setAttribute('src',src);
     music.play();
+    span.className = 'stop';
+    isT++
   })
   btn3.addEventListener('click', function(){
     if(num==(musicArr.length-1)){num = 0};
@@ -67,6 +69,8 @@
     src = '/cyclone.github.io/assets/music/'+musicArr[num]+'.mp3';
     music.setAttribute('src',src);
     music.play();
+    span.className = 'stop';
+    isT++
   })
   btn.addEventListener('click', function(){
       music.setAttribute('src',src);
