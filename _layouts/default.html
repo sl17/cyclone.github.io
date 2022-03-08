@@ -49,19 +49,23 @@
   let btn = document.getElementById("btn");
   let btn3 = document.getElementById("btn3");
   let music = document.getElementById("music");
-  let musicArr = ['00001','00002'];
+  let musicArr = ['00001','00002','00003','00004','00005'];
   let num = 0;
   
   let src = '/cyclone.github.io/assets/music/'+musicArr[num]+'.mp3'
   btn1.addEventListener('click', function(){
     if(num==0){num = musicArr.length-1};
     num--;
-    src = '/cyclone.github.io/assets/music/'+musicArr[num]+'.mp3';music.play();
+    src = '/cyclone.github.io/assets/music/'+musicArr[num]+'.mp3';
+    music.setAttribute('src',src);
+    music.play();
   })
   btn3.addEventListener('click', function(){
     if(num==(musicArr.length-1)){num = 0};
+    num++;
     src = '/cyclone.github.io/assets/music/'+musicArr[num]+'.mp3';
-    num++;music.play();
+    music.setAttribute('src',src);
+    music.play();
   })
   btn.addEventListener('click', function(){
       music.setAttribute('src',src);
