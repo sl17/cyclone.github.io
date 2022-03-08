@@ -1633,7 +1633,7 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
 }
 .play{
     display: inline-block;
-    width: 4px;height: 12px;
+    width: 12px;height: 12px;
     border-left: #000 4px solid;
     border-right: #000 4px solid;
 }
