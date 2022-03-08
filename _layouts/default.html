@@ -131,20 +131,20 @@
                 cxt.beginPath();
                 cxt.lineWidth = 1;
                 cxt.moveTo(120, 120);
-                cxt.lineTo(Math.cos((i * 0.5 + 90) / 180 * Math.PI) * (200 + value) + 120, (- Math.sin((i * 0.5 + 90) / 180 * Math.PI) * (200 + value) + 120));
+                cxt.lineTo(Math.cos((i * 0.5 + 90) / 180 * Math.PI) * (20 + value) + 120, (- Math.sin((i * 0.5 + 90) / 180 * Math.PI) * (20 + value) + 120));
                 cxt.stroke();
                 //绘制右半边
                 cxt.beginPath();
                 cxt.lineWidth = 1;
                 cxt.moveTo(120, 120);
-                cxt.lineTo((Math.sin((i * 0.5) / 180 * Math.PI) * (200 + value) + 120), -Math.cos((i * 0.5) / 180 * Math.PI) * (200 + value) + 120);
+                cxt.lineTo((Math.sin((i * 0.5) / 180 * Math.PI) * (20 + value) + 120), -Math.cos((i * 0.5) / 180 * Math.PI) * (20 + value) + 120);
                 cxt.strokeStyle=gradient;
                 cxt.stroke();
             }
             //画一个小圆，将线条覆盖
             cxt.beginPath();
             cxt.lineWidth = 1;
-            cxt.arc(120, 120, 60, 0, 2 * Math.PI, false);
+            cxt.arc(120, 120, 100, 0, 2 * Math.PI, false);
             cxt.fillStyle = "#fff";
             cxt.stroke();
             cxt.fill();
