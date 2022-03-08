@@ -11,7 +11,10 @@ layout: default
       <div class="author-name">{{site.author}}</div>
       <p>{{site.about-author}}</p>
       <a href="{{site.baseurl}}/tags/" class="tag"><i class="fa fa-tags" aria-hidden="true"></i>Tags</a>
-      <button id="music">play</button>
+      <div><button id="btn">play</button>
+      <audio style="opacity:0" id="music" src="">
+        您的浏览器不支持 audio 标签。
+        </audio></div>
     </div>
   </header> <!-- End Header -->
   <footer>
