@@ -45,15 +45,15 @@
 /*
   播放音乐
 */
-  let btn1 = document.getElementById("btn1");
-  let btn = document.getElementById("btn");
-  let btn3 = document.getElementById("btn3");
-  let music = document.getElementById("music");
-  let musicArr = ['00001','00002','00003','00004','00005'];
-  let num = 0;
-  let isT = 0;
-  let span = document.querySelector('#btn span');
-  let src = '/cyclone.github.io/assets/music/'+musicArr[num]+'.mp3'
+  let btn1 = document.getElementById("btn1"),
+  btn = document.getElementById("btn"),
+  btn3 = document.getElementById("btn3"),
+  music = document.getElementById("music"),
+  musicArr = ['00001','00002','00003','00004','00005'],
+  num = 0,
+  isT = 0,
+  span = document.querySelector('#btn span'),
+  src = '/cyclone.github.io/assets/music/'+musicArr[num]+'.mp3';
   btn1.addEventListener('click', function(){
     if(num==0){num = musicArr.length-1};
     num--;
