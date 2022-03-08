@@ -1664,4 +1664,29 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
     50%{height: 12px;}
     100%{height: 5px;}
 }
+.water_tips {
+width: 50%;
+line-height: 20px;
+overflow: hidden;
+border: 1px solid rgba(255, 255, 255, 0.7);
+box-sizing: border-box;
+position: relative;
+}
 
+.water_text {
+white-space: nowrap;
+position: absolute;
+display: inline-block;
+color: #000;
+top: 0px;
+animation: 6s scroll linear infinite normal;
+}
+
+@keyframes scrollText {
+0% {
+    right: -100%;
+}
+100% {
+    right: 100%;
+}
+}
