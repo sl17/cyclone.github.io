@@ -42,5 +42,17 @@
     document.getElementsByTagName("body")[0].style.backgroundPositionX= 50 + diffW*0.01 +'%'
     document.getElementsByTagName("body")[0].style.backgroundPositionY= 50 + diffH*0.01 +'%'
   }
+/*
+  播放音乐
+*/
+  let btn = document.getElementById("btn");
+  let music = document.getElementById("music").src;
+  let musicArr = ['00001','00002'];
+  let src = "/cyclone.github.io/assets/music/'+musicArr[0]+'.mp3"
+  btn.addEventListener('click', function(){
+      music = src;
+      music.play();
+  })
+ 
 </script>
 </html>
