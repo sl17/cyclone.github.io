@@ -49,15 +49,20 @@
   btn = document.getElementById("btn"),
   btn3 = document.getElementById("btn3"),
   music = document.getElementById("music"),
-  musicArr = ['00001','00002','00003','00004','00005','00006','00007','00008','00009','00010'],
+  musicArr = [{name:'爱的代价-李宗盛',value:'00001'},{name:'哭泣站台-王小帅',value:'00002'},{name:'叹-黄玲',value:'00003'},{name:'一路生花-温奕心',value:'00004'},
+              {name:'漠河舞厅-柳爽',value:'00005'},{name:'请先说你好-贺一航',value:'00006'},{name:'情人-beyond',value:'00007'},{name:'留给这世上我最爱的人-容祖儿',value:'00008'},
+              {name:'爱就一个字-张信哲',value:'00009'},{name:'旅行-许巍',value:'00010'}],
   num = 0,
   isT = 0,
   span = document.querySelector('#btn span'),
-  src = '/cyclone.github.io/assets/music/'+musicArr[num]+'.mp3';
+  waterText = document.querySelector('.water_text'),
+  src = '/cyclone.github.io/assets/music/'+musicArr[num].value+'.mp3';
+  waterText.innerText = musicArr[num].name;
   btn1.addEventListener('click', function(){
     if(num==0){num = musicArr.length-1};
     num--;
-    src = '/cyclone.github.io/assets/music/'+musicArr[num]+'.mp3';
+    src = '/cyclone.github.io/assets/music/'+musicArr[num].value+'.mp3';
+    waterText.innerText = musicArr[num].name;
     music.setAttribute('src',src);
     music.play();
     span.className = 'stop';
@@ -66,7 +71,8 @@
   btn3.addEventListener('click', function(){
     if(num==(musicArr.length-1)){num = 0};
     num++;
-    src = '/cyclone.github.io/assets/music/'+musicArr[num]+'.mp3';
+    src = '/cyclone.github.io/assets/music/'+musicArr[num].value+'.mp3';
+    waterText.innerText = musicArr[num].name;
     music.setAttribute('src',src);
     music.play();
     span.className = 'stop';
