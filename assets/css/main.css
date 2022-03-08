@@ -1626,20 +1626,20 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
 	border-bottom: transparent 6px solid;
 	border-left: #000 12px solid;
 }
-.stop{
+.play{
     display: inline-block;
     width: 12px;height: 12px;
     background-color: #000;
 }
 
-.play{
+.stop{
     display: inline-block;
     width: 2px;height: 12px;
     background-color: #000;
     position: relative;
     animation: pmove 1.3s linear infinite;
 }
-.play::before{
+.stop::before{
     content: '';
     position: absolute;
     left: -5px;
@@ -1649,7 +1649,7 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
     background-color: #000;
     animation: pmove 1.1s linear infinite;
 }
-.play::after{
+.stop::after{
     content: '';
     position: absolute;
     right: -5px;
