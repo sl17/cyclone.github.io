@@ -1626,12 +1626,12 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
 	border-bottom: transparent 6px solid;
 	border-left: #000 12px solid;
 }
-.play{
+.stop{
     display: inline-block;
     width: 12px;height: 12px;
     background-color: #000;
 }
-.stop{
+.play{
     display: inline-block;
     width: 12px;height: 12px;
     border-left: #000 4px solid;
