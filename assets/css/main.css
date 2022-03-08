@@ -1631,10 +1631,37 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
     width: 12px;height: 12px;
     background-color: #000;
 }
+
 .play{
     display: inline-block;
-    width: 12px;height: 12px;
-    border-left: #000 4px solid;
-    border-right: #000 4px solid;
+    width: 2px;height: 12px;
+    background-color: #000;
+    position: relative;
+    animation: pmove 1.3s linear infinite;
+}
+.play::before{
+    content: '';
+    position: absolute;
+    left: -5px;
+    bottom: 0;
+    width: 2px;
+    height: 1px;
+    background-color: #000;
+    animation: pmove 1.1s linear infinite;
+}
+.play::after{
+    content: '';
+    position: absolute;
+    right: -5px;
+    bottom: 0;
+    width: 2px;
+    height: 1px;
+    background-color: #000;
+    animation: pmove .8s linear infinite;
+}
+@keyframes pmove {
+    0%{height: 0px;}
+    50%{height: 12px;}
+    100%{height: 5px;}
 }
 
