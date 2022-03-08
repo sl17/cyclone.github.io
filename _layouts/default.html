@@ -58,7 +58,7 @@
   waterText = document.querySelector('.water_text'),
   src = '/cyclone.github.io/assets/music/'+musicArr[num].value+'.mp3';
   waterText.innerText = musicArr[num].name;
-  img(src)
+  
   btn1.addEventListener('click', function(){
     if(num==0){num = musicArr.length-1};
     num--;
@@ -83,6 +83,7 @@
   })
   btn.addEventListener('click', function(){
       music.setAttribute('src',src);
+      img(src);
       if(isT%2==0){
           music.play();
           span.className = 'stop';
