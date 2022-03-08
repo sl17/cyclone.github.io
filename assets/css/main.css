@@ -1615,15 +1615,15 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
 .prev{
 	display: inline-block;
 	width: 0px;height: 0px;
-	border-top: transparent 8px solid;
-	border-bottom: transparent 8px solid;
-	border-right: #000 14px solid;
+	border-top: transparent 6px solid;
+	border-bottom: transparent 6px solid;
+	border-right: #000 12px solid;
 }
 .next{
 	display: inline-block;
 	width: 0px;height: 0px;
-	border-top: transparent 8px solid;
-	border-bottom: transparent 8px solid;
-	border-left: #000 14px solid;
+	border-top: transparent 6px solid;
+	border-bottom: transparent 6px solid;
+	border-left: #000 12px solid;
 }
 
