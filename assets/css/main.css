@@ -1665,21 +1665,40 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
     100%{height: 5px;}
 }
 .water_tips {
-width: 50%;
-line-height: 20px;
-overflow: hidden;
-border: 1px solid rgba(255, 255, 255, 0.7);
-box-sizing: border-box;
-position: relative;
+	width: 60%;
+	line-height: 20px;
+	overflow: hidden;
+	box-sizing: border-box;
+	position: relative;
+}
+.water_tips::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background-image: linear-gradient(90deg,rgb(255, 255, 255) ,rgba(255,255,255,0.1));
+	z-index: 9;
+}
+.water_tips::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20px;
+	height: 20px;
+	background-image: linear-gradient(90deg,rgb(255, 255, 255,0.1) ,rgba(255,255,255));
+	z-index: 9;
 }
 
 .water_text {
-white-space: nowrap;
-position: absolute;
-display: inline-block;
-color: #000;
-top: 0px;
-animation: 6s scroll linear infinite normal;
+	white-space: nowrap;
+	position: absolute;
+	display: inline-block;
+	color: #000;
+	top: 0px;
+	animation: 6s scroll linear infinite normal;
 }
 
 @keyframes scrollText {
