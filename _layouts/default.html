@@ -46,15 +46,23 @@
   播放音乐
 */
   let btn1 = document.getElementById("btn1");
-  let btn2 = document.getElementById("btn2");
+  let btn = document.getElementById("btn");
   let btn3 = document.getElementById("btn3");
   let music = document.getElementById("music");
   let musicArr = ['00001','00002'];
   let num = 0;
   
   let src = '/cyclone.github.io/assets/music/'+musicArr[num]+'.mp3'
-  btn1.onclick = function(){if(num==0){num = musicArr.length-1};num--;src = '/cyclone.github.io/assets/music/'+musicArr[num]+'.mp3';music.play();}
-  btn3.onclick = function(){if(num==(musicArr.length-1)){num = 0};src = '/cyclone.github.io/assets/music/'+musicArr[num]+'.mp3';num++;music.play();}
+  btn1.addEventListener('click', function(){
+    if(num==0){num = musicArr.length-1};
+    num--;
+    src = '/cyclone.github.io/assets/music/'+musicArr[num]+'.mp3';music.play();
+  })
+  btn3.addEventListener('click', function(){
+    if(num==(musicArr.length-1)){num = 0};
+    src = '/cyclone.github.io/assets/music/'+musicArr[num]+'.mp3';
+    num++;music.play();
+  })
   btn.addEventListener('click', function(){
       music.setAttribute('src',src);
       music.play();
