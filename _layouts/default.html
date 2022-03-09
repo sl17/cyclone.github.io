@@ -130,21 +130,21 @@
                 //绘制左半边
                 cxt.beginPath();
                 cxt.lineWidth = 1;
-                cxt.moveTo(120, 120);
-                cxt.lineTo(Math.cos((i * 0.5 + 90) / 180 * Math.PI) * (100 + value) + 120, (- Math.sin((i * 0.5 + 90) / 180 * Math.PI) * (100 + value) + 120));
+                cxt.moveTo(110, 110);
+                cxt.lineTo(Math.cos((i * 0.5 + 90) / 180 * Math.PI) * (100 + value) + 110, (- Math.sin((i * 0.5 + 90) / 180 * Math.PI) * (100 + value) + 110));
                 cxt.stroke();
                 //绘制右半边
                 cxt.beginPath();
                 cxt.lineWidth = 1;
-                cxt.moveTo(120, 120);
-                cxt.lineTo((Math.sin((i * 0.5) / 180 * Math.PI) * (100 + value) + 120),-Math.cos((i * 0.5) / 180 * Math.PI) * (100 + value) + 120);
+                cxt.moveTo(110, 110);
+                cxt.lineTo((Math.sin((i * 0.5) / 180 * Math.PI) * (100 + value) + 110),-Math.cos((i * 0.5) / 180 * Math.PI) * (100 + value) + 110);
                 cxt.strokeStyle=gradient;
                 cxt.stroke();
             }
             //画一个小圆，将线条覆盖
             cxt.beginPath();
             cxt.lineWidth = 1;
-            cxt.arc(120, 120, 100, 0, 2 * Math.PI, false);
+            cxt.arc(110, 110, 100, 0, 2 * Math.PI, false);
             cxt.fillStyle = "#fff";
             cxt.stroke();
             cxt.fill();
@@ -153,7 +153,7 @@
             var height = 100, width = 200;
             cxt.beginPath();
             for (var i = 0; i < width; i++) {
-                cxt.lineTo(i + 20, 120 - (height / 2 * (output2[output2.length * i / width | 0] / 256 - 0.5)));
+                cxt.lineTo(i + 10, 120 - (height / 2 * (output2[output2.length * i / width | 0] / 256 - 0.5)));
             }
             cxt.strokeStyle=gradient;
             cxt.stroke();
