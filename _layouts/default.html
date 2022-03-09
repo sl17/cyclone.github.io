@@ -24,136 +24,136 @@
   {% include analytics.html %}
 </body>
 <script>
-  var d = new Date().getDate();
-  document.getElementsByTagName("body")[0].style.backgroundImage  = 'url(/cyclone.github.io/assets/img/bg/bg'+d+'.jpg)';
-  document.addEventListener('mousemove', showMousePosition, false);
-  let bodyWidth = document.body.clientWidth
-  let bodyHeight = document.body.clientHeight
-  window.onresize = function(){
-    bodyWidth = document.body.clientWidth;
-    bodyHeight = document.body.clientHeight;
-  }
-  let bodyWidthHalf = bodyWidth/2;
-  let bodyHeightHalf = bodyHeight/2;
-  let [diffW,diffH] = [0,0] 
-  function showMousePosition(event) {       
-    diffW = bodyWidthHalf - event.clientX;
-    diffH = bodyHeightHalf - event.clientY;
-    document.getElementsByTagName("body")[0].style.backgroundPositionX= 50 + diffW*0.01 +'%'
-    document.getElementsByTagName("body")[0].style.backgroundPositionY= 50 + diffH*0.01 +'%'
-  }
-/*
-  播放音乐
-*/
-  let btn1 = document.getElementById("btn1"),
-  btn = document.getElementById("btn"),
-  btn3 = document.getElementById("btn3"),
-  musicArr = [{name:'爱的代价-李宗盛',value:'00001'},{name:'哭泣站台-王小帅',value:'00002'},{name:'叹-黄玲',value:'00003'},{name:'一路生花-温奕心',value:'00004'},
-              {name:'漠河舞厅-柳爽',value:'00005'},{name:'请先说你好-贺一航',value:'00006'},{name:'情人-beyond',value:'00007'},{name:'留给这世上我最爱的人-容祖儿',value:'00008'},
-              {name:'爱就一个字-张信哲',value:'00009'},{name:'旅行-许巍',value:'00010'},{name:'Sofia-Alvaro Soler',value:'00011'}],
-  num = 0,
-  isT = 0,
-  span = document.querySelector('#btn span'),
-  waterText = document.querySelector('.water_text'),
-  src = '/cyclone.github.io/assets/music/'+musicArr[num].value+'.mp3';
-  waterText.innerText = musicArr[num].name;
-  let audio = new Audio();
-  btn1.addEventListener('click', function(){
-    if(num==0){num = musicArr.length-1};
-    num--;
-    src = '/cyclone.github.io/assets/music/'+musicArr[num].value+'.mp3';
+    var d = new Date().getDate();
+    document.getElementsByTagName("body")[0].style.backgroundImage = 'url(/cyclone.github.io/assets/img/bg/bg' + d + '.jpg)';
+    document.addEventListener('mousemove', showMousePosition, false);
+    let bodyWidth = document.body.clientWidth
+    let bodyHeight = document.body.clientHeight
+    window.onresize = function () {
+        bodyWidth = document.body.clientWidth;
+        bodyHeight = document.body.clientHeight;
+    }
+    let bodyWidthHalf = bodyWidth / 2;
+    let bodyHeightHalf = bodyHeight / 2;
+    let [diffW, diffH] = [0, 0]
+    function showMousePosition(event) {
+        diffW = bodyWidthHalf - event.clientX;
+        diffH = bodyHeightHalf - event.clientY;
+        document.getElementsByTagName("body")[0].style.backgroundPositionX = 50 + diffW * 0.01 + '%'
+        document.getElementsByTagName("body")[0].style.backgroundPositionY = 50 + diffH * 0.01 + '%'
+    }
+    /*
+        播放音乐
+    */
+    let btn1 = document.getElementById("btn1"),
+        btn = document.getElementById("btn"),
+        btn3 = document.getElementById("btn3"),
+        musicArr = [{ name: '爱的代价-李宗盛', value: '00001' }, { name: '哭泣站台-王小帅', value: '00002' }, { name: '叹-黄玲', value: '00003' }, { name: '一路生花-温奕心', value: '00004' },
+        { name: '漠河舞厅-柳爽', value: '00005' }, { name: '请先说你好-贺一航', value: '00006' }, { name: '情人-beyond', value: '00007' }, { name: '留给这世上我最爱的人-容祖儿', value: '00008' },
+        { name: '爱就一个字-张信哲', value: '00009' }, { name: '旅行-许巍', value: '00010' }, { name: 'Sofia-Alvaro Soler', value: '00011' }],
+        num = 0,
+        isT = 0,
+        span = document.querySelector('#btn span'),
+        waterText = document.querySelector('.water_text'),
+        src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
     waterText.innerText = musicArr[num].name;
-	  audio.src = src;
-    audio.play();
-    span.className = 'stop';
-    isT++
-  })
-  btn3.addEventListener('click', function(){
-    if(num==(musicArr.length-1)){num = 0};
-    num++;
-    src = '/cyclone.github.io/assets/music/'+musicArr[num].value+'.mp3';
-    waterText.innerText = musicArr[num].name;
-	  audio.src = src;
-    audio.play();
-    span.className = 'stop';
-    isT++
-  })
-  btn.addEventListener('click', function(){
-	 audio.src = src;
-      if(isT%2==0){
-	  audio.play();
-          span.className = 'stop';
-      }else{
-	  audio.pause();
-          span.className = 'play';
-      }
-      isT++
-  })
-	var wrap = document.getElementById("wrap");
-	var cxt = wrap.getContext("2d");
-	//获取API
-	window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;
-	//var AudioContext = AudioContext || webkitAudioContext;
-	var context = new window.AudioContext();
-	//加载媒体
-	
-	//创建节点
-	var source = context.createMediaElementSource(audio);
-	var analyser = context.createAnalyser();
-	//连接：source → analyser → destination
-	source.connect(analyser);
-	analyser.connect(context.destination);
-	//创建数据
-	var output = new Uint8Array(361);
-	//计算出采样频率44100所需的缓冲区长度
-	var length = analyser.frequencyBinCount * 44100 / context.sampleRate | 0;
-	//创建数据 
-	var output2 = new Uint8Array(length);
-	(function drawSpectrum() {
-	    analyser.getByteFrequencyData(output);//获取频域数据
-	    cxt.clearRect(0, 0, wrap.width, wrap.height);
-	    var gradient = cxt.createLinearGradient(0, 0, 416, 416);
-			gradient.addColorStop("0.1", "red");
-			gradient.addColorStop("0.25", "pink");
-			gradient.addColorStop("0.3", "magenta");
-			gradient.addColorStop("0.65", "darkcyan");
-			gradient.addColorStop("0.85", "darkgoldenrod");
-			gradient.addColorStop("1.0", "coral");
-	    //画线条
-	    for (var i = 0; i < output.length; i++) {
-		var value = output[i] / 10;
-		//绘制左半边
-		cxt.beginPath();
-		cxt.lineWidth = 1;
-		cxt.moveTo(110, 110);
-		cxt.lineTo(Math.cos((i * 0.5 + 90) / 180 * Math.PI) * (100 + value) + 110, (- Math.sin((i * 0.5 + 90) / 180 * Math.PI) * (100 + value) + 110));
-		cxt.stroke();
-		//绘制右半边
-		cxt.beginPath();
-		cxt.lineWidth = 1;
-		cxt.moveTo(110, 110);
-		cxt.lineTo((Math.sin((i * 0.5) / 180 * Math.PI) * (100 + value) + 110),-Math.cos((i * 0.5) / 180 * Math.PI) * (100 + value) + 110);
-		cxt.strokeStyle=gradient;
-		cxt.stroke();
-	    }
-	    //画一个小圆，将线条覆盖
-	    cxt.beginPath();
-	    cxt.lineWidth = 1;
-	    cxt.arc(110, 110, 100, 0, 2 * Math.PI, false);
-	    cxt.fillStyle = "#f5fdff";
-	    cxt.stroke();
-	    cxt.fill();
-	    //将缓冲区的数据绘制到Canvas上 
-	    analyser.getByteTimeDomainData(output2);
-	    var height = 100, width = 200;
-	    cxt.beginPath();
-	    for (var i = 0; i < width; i++) {
-		cxt.lineTo(i + 10, 110 - (height / 2 * (output2[output2.length * i / width | 0] / 256 - 0.5)));
-	    }
-	    cxt.strokeStyle=gradient;
-	    cxt.stroke();
-	    //请求下一帧
-	    requestAnimationFrame(drawSpectrum);
-	})();
+    let audio = new Audio();
+    btn1.addEventListener('click', function () {
+        if (num == 0) { num = musicArr.length - 1 };
+        num--;
+        src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
+        waterText.innerText = musicArr[num].name;
+        audio.src = src;
+        audio.play();
+        span.className = 'stop';
+        isT++
+    })
+    btn3.addEventListener('click', function () {
+        if (num == (musicArr.length - 1)) { num = 0 };
+        num++;
+        src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
+        waterText.innerText = musicArr[num].name;
+        audio.src = src;
+        audio.play();
+        span.className = 'stop';
+        isT++
+    })
+    btn.addEventListener('click', function () {
+        audio.src = src;
+        if (isT % 2 == 0) {
+            audio.play();
+            span.className = 'stop';
+        } else {
+            audio.pause();
+            span.className = 'play';
+        }
+        isT++
+    })
+    var wrap = document.getElementById("wrap");
+    var cxt = wrap.getContext("2d");
+    //获取API
+    window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;
+    //var AudioContext = AudioContext || webkitAudioContext;
+    var context = new window.AudioContext();
+    //加载媒体
+
+    //创建节点
+    var source = context.createMediaElementSource(audio);
+    var analyser = context.createAnalyser();
+    //连接：source → analyser → destination
+    source.connect(analyser);
+    analyser.connect(context.destination);
+    //创建数据
+    var output = new Uint8Array(361);
+    //计算出采样频率44100所需的缓冲区长度
+    var length = analyser.frequencyBinCount * 44100 / context.sampleRate | 0;
+    //创建数据 
+    var output2 = new Uint8Array(length);
+    (function drawSpectrum() {
+        analyser.getByteFrequencyData(output);//获取频域数据
+        cxt.clearRect(0, 0, wrap.width, wrap.height);
+        var gradient = cxt.createLinearGradient(0, 0, 416, 416);
+        gradient.addColorStop("0.1", "red");
+        gradient.addColorStop("0.25", "pink");
+        gradient.addColorStop("0.3", "magenta");
+        gradient.addColorStop("0.65", "darkcyan");
+        gradient.addColorStop("0.85", "darkgoldenrod");
+        gradient.addColorStop("1.0", "coral");
+        //画线条
+        for (var i = 0; i < output.length; i++) {
+            var value = output[i] / 10;
+            //绘制左半边
+            cxt.beginPath();
+            cxt.lineWidth = 1;
+            cxt.moveTo(110, 110);
+            cxt.lineTo(Math.cos((i * 0.5 + 90) / 180 * Math.PI) * (100 + value) + 110, (- Math.sin((i * 0.5 + 90) / 180 * Math.PI) * (100 + value) + 110));
+            cxt.stroke();
+            //绘制右半边
+            cxt.beginPath();
+            cxt.lineWidth = 1;
+            cxt.moveTo(110, 110);
+            cxt.lineTo((Math.sin((i * 0.5) / 180 * Math.PI) * (100 + value) + 110), -Math.cos((i * 0.5) / 180 * Math.PI) * (100 + value) + 110);
+            cxt.strokeStyle = gradient;
+            cxt.stroke();
+        }
+        //画一个小圆，将线条覆盖
+        cxt.beginPath();
+        cxt.lineWidth = 1;
+        cxt.arc(110, 110, 100, 0, 2 * Math.PI, false);
+        cxt.fillStyle = "#f5fdff";
+        cxt.stroke();
+        cxt.fill();
+        //将缓冲区的数据绘制到Canvas上 
+        analyser.getByteTimeDomainData(output2);
+        var height = 100, width = 200;
+        cxt.beginPath();
+        for (var i = 0; i < width; i++) {
+            cxt.lineTo(i + 10, 110 - (height / 2 * (output2[output2.length * i / width | 0] / 256 - 0.5)));
+        }
+        cxt.strokeStyle = gradient;
+        cxt.stroke();
+        //请求下一帧
+        requestAnimationFrame(drawSpectrum);
+    })();
 </script>
 </html>
