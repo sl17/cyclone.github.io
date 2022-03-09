@@ -97,7 +97,7 @@
         var wrap = document.getElementById("wrap");
         var cxt = wrap.getContext("2d");
         //获取API
-	window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;
+        window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;
         //var AudioContext = AudioContext || webkitAudioContext;
         var context = new window.AudioContext();
         //加载媒体
@@ -131,13 +131,13 @@
                 cxt.beginPath();
                 cxt.lineWidth = 1;
                 cxt.moveTo(120, 120);
-                cxt.lineTo(Math.cos((i * 0.5 + 90) / 180 * Math.PI) * (20 + value) + 120, (- Math.sin((i * 0.5 + 90) / 180 * Math.PI) * (20 + value) + 120));
+                cxt.lineTo(Math.cos((i * 0.5 + 90) / 180 * Math.PI) * (100 + value) + 120, (- Math.sin((i * 0.5 + 90) / 180 * Math.PI) * (100 + value) + 120));
                 cxt.stroke();
                 //绘制右半边
                 cxt.beginPath();
                 cxt.lineWidth = 1;
                 cxt.moveTo(120, 120);
-                cxt.lineTo((Math.sin((i * 0.5) / 180 * Math.PI) * (20 + value) + 120), -Math.cos((i * 0.5) / 180 * Math.PI) * (20 + value) + 120);
+                cxt.lineTo((Math.sin((i * 0.5) / 180 * Math.PI) * (100 + value) + 120),-Math.cos((i * 0.5) / 180 * Math.PI) * (100 + value) + 120);
                 cxt.strokeStyle=gradient;
                 cxt.stroke();
             }
@@ -150,17 +150,16 @@
             cxt.fill();
             //将缓冲区的数据绘制到Canvas上 
             analyser.getByteTimeDomainData(output2);
-            var height = 100, width = 400;
+            var height = 100, width = 200;
             cxt.beginPath();
             for (var i = 0; i < width; i++) {
-                cxt.lineTo(i + 100, 120 - (height / 2 * (output2[output2.length * i / width | 0] / 256 - 0.5)));
+                cxt.lineTo(i + 20, 120 - (height / 2 * (output2[output2.length * i / width | 0] / 256 - 0.5)));
             }
             cxt.strokeStyle=gradient;
             cxt.stroke();
             //请求下一帧
             requestAnimationFrame(drawSpectrum);
         })();
-    
   }
 </script>
 </html>
