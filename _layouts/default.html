@@ -57,14 +57,13 @@
   waterText = document.querySelector('.water_text'),
   src = '/cyclone.github.io/assets/music/'+musicArr[num].value+'.mp3';
   waterText.innerText = musicArr[num].name;
-  var audio = new Audio('./assets/music/'+musicArr[num].value+'.mp3');
+  let audio = '';
   btn1.addEventListener('click', function(){
     if(num==0){num = musicArr.length-1};
     num--;
     src = '/cyclone.github.io/assets/music/'+musicArr[num].value+'.mp3';
 	  audio = new Audio('./assets/music/'+musicArr[num].value+'.mp3');
     waterText.innerText = musicArr[num].name;
-	audio.pause();
     audio.play();
     span.className = 'stop';
     isT++
