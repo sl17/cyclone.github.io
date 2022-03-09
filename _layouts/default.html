@@ -90,6 +90,7 @@
         isT++
     })
     audio.addEventListener('ended', function () {  
+      console.log('end')
         if (num == (musicArr.length - 1)) { num = 0 };
         num++;
         src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
