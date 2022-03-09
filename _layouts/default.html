@@ -123,13 +123,13 @@
         analyser.getByteFrequencyData(output);//获取频域数据
         cxt.clearRect(0, 0, wrap.width, wrap.height);
         //var gradient = cxt.createLinearGradient(40, 40, 180, 180);
-        var gradient = ctx.createRadialGradient(110,110,5,90,60,100);
+        var gradient = cxt.createLinearGradient(40, 40, 180, 180);
         gradient.addColorStop("0.1", "red");
-        gradient.addColorStop("0.25", "pink");
-        gradient.addColorStop("0.3", "magenta");
-        gradient.addColorStop("0.65", "darkcyan");
-        gradient.addColorStop("0.85", "darkgoldenrod");
-        gradient.addColorStop("1.0", "coral");
+        gradient.addColorStop("0.25", "magenta");
+        gradient.addColorStop("0.3", "#0099ff");
+        gradient.addColorStop("0.65", "#00ff4b");
+        gradient.addColorStop("0.85", "#ffff00");
+        gradient.addColorStop("1.0", "#ff7200");
         //画线条
         for (var i = 0; i < output.length; i++) {
             var value = output[i] / 10;
