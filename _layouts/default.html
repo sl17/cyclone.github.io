@@ -66,6 +66,7 @@
     waterText.innerText = musicArr[num].name;
     music.setAttribute('src',src);
     music.play();
+    audio.play();
     span.className = 'stop';
     isT++
   })
@@ -76,6 +77,7 @@
     waterText.innerText = musicArr[num].name;
     music.setAttribute('src',src);
     music.play();
+    audio.play();
     span.className = 'stop';
     isT++
   })
@@ -83,9 +85,11 @@
       music.setAttribute('src',src);
       if(isT%2==0){
           music.play();
+	  audio.play();
           span.className = 'stop';
       }else{
           music.pause();
+	  audio.pause();
           span.className = 'play';
       }
       isT++
