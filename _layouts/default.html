@@ -63,7 +63,6 @@
     if(num==0){num = musicArr.length-1};
     num--;
     src = '/cyclone.github.io/assets/music/'+musicArr[num].value+'.mp3';
-    img(src)
     waterText.innerText = musicArr[num].name;
     music.setAttribute('src',src);
     music.play();
@@ -74,7 +73,6 @@
     if(num==(musicArr.length-1)){num = 0};
     num++;
     src = '/cyclone.github.io/assets/music/'+musicArr[num].value+'.mp3';
-    img(src)
     waterText.innerText = musicArr[num].name;
     music.setAttribute('src',src);
     music.play();
@@ -83,7 +81,6 @@
   })
   btn.addEventListener('click', function(){
       music.setAttribute('src',src);
-      img(src);
       if(isT%2==0){
           music.play();
           span.className = 'stop';
