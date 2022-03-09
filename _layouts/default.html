@@ -126,7 +126,7 @@
             cxt.beginPath();
             cxt.lineWidth = 1;
             cxt.moveTo(110, 110);
-            cxt.lineTo(Math.cos((i * 0.5 + 90) / 180 * Math.PI) * (100 + value) + 60, (- Math.sin((i * 0.5 + 90) / 180 * Math.PI) * (100 + value) + 60));
+            cxt.lineTo(Math.cos((i * 0.5 + 90) / 180 * Math.PI) * (100 + value) + 110, (- Math.sin((i * 0.5 + 90) / 180 * Math.PI) * (100 + value) + 110));
             cxt.stroke();
             //绘制右半边
             cxt.beginPath();
@@ -145,10 +145,10 @@
         cxt.fill();
         //将缓冲区的数据绘制到Canvas上 
         analyser.getByteTimeDomainData(output2);
-        var height = 60, width = 120;
+        var height = 110, width = 120;
         cxt.beginPath();
         for (var i = 0; i < width; i++) {
-            cxt.lineTo(i + 10, 60 - (height / 2 * (output2[output2.length * i / width | 0] / 256 - 0.5)));
+            cxt.lineTo(i + 50, 110 - (height / 2 * (output2[output2.length * i / width | 0] / 256 - 0.5)));
         }
         cxt.strokeStyle = gradient;
         cxt.stroke();
