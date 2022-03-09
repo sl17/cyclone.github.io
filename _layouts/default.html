@@ -122,7 +122,8 @@
     (function drawSpectrum() {
         analyser.getByteFrequencyData(output);//获取频域数据
         cxt.clearRect(0, 0, wrap.width, wrap.height);
-        var gradient = cxt.createLinearGradient(40, 40, 180, 180);
+        //var gradient = cxt.createLinearGradient(40, 40, 180, 180);
+        var gradient = ctx.createRadialGradient(110,110,5,90,60,100);
         gradient.addColorStop("0.1", "red");
         gradient.addColorStop("0.25", "pink");
         gradient.addColorStop("0.3", "magenta");
