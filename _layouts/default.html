@@ -89,6 +89,16 @@
         }
         isT++
     })
+    audio.addEventListener('ended', function () {  
+        if (num == (musicArr.length - 1)) { num = 0 };
+        num++;
+        src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
+        waterText.innerText = musicArr[num].name;
+        audio.src = src;
+        audio.play();
+        span.className = 'stop';
+        isT++
+    }, false);
     var wrap = document.getElementById("wrap");
     var cxt = wrap.getContext("2d");
     //获取API
