@@ -58,14 +58,14 @@
   waterText = document.querySelector('.water_text'),
   src = '/cyclone.github.io/assets/music/'+musicArr[num].value+'.mp3';
   waterText.innerText = musicArr[num].name;
-  
+  var audio = new Audio(src);
   btn1.addEventListener('click', function(){
     if(num==0){num = musicArr.length-1};
     num--;
     src = '/cyclone.github.io/assets/music/'+musicArr[num].value+'.mp3';
+	  audio = new Audio(src);
     waterText.innerText = musicArr[num].name;
     music.setAttribute('src',src);
-    music.play();
     audio.play();
     span.className = 'stop';
     isT++
@@ -74,27 +74,25 @@
     if(num==(musicArr.length-1)){num = 0};
     num++;
     src = '/cyclone.github.io/assets/music/'+musicArr[num].value+'.mp3';
+	  audio = new Audio(src);
     waterText.innerText = musicArr[num].name;
     music.setAttribute('src',src);
-    music.play();
     audio.play();
     span.className = 'stop';
     isT++
   })
   btn.addEventListener('click', function(){
       music.setAttribute('src',src);
+	  audio = new Audio(src);
       if(isT%2==0){
-          music.play();
 	  audio.play();
           span.className = 'stop';
       }else{
-          music.pause();
 	  audio.pause();
           span.className = 'play';
       }
       isT++
   })
-  console.log(musicArr[num].name)
 	var wrap = document.getElementById("wrap");
 	var cxt = wrap.getContext("2d");
 	//获取API
@@ -102,7 +100,7 @@
 	//var AudioContext = AudioContext || webkitAudioContext;
 	var context = new window.AudioContext();
 	//加载媒体
-	var audio = new Audio('./assets/music/00001.mp3');
+	
 	//创建节点
 	var source = context.createMediaElementSource(audio);
 	var analyser = context.createAnalyser();
