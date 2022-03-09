@@ -126,13 +126,13 @@
             cxt.beginPath();
             cxt.lineWidth = 1;
             cxt.moveTo(110, 110);
-            cxt.lineTo(Math.cos((i * 0.5 + 90) / 180 * Math.PI) * (80 + value) + 110, (- Math.sin((i * 0.5 + 90) / 180 * Math.PI) * (80 + value) + 110));
+            cxt.lineTo(Math.cos((i * 0.5 + 90) / 180 * Math.PI) * (60 + value) + 110, (- Math.sin((i * 0.5 + 90) / 180 * Math.PI) * (60 + value) + 110));
             cxt.stroke();
             //绘制右半边
             cxt.beginPath();
             cxt.lineWidth = 1;
             cxt.moveTo(110, 110);
-            cxt.lineTo((Math.sin((i * 0.5) / 180 * Math.PI) * (75 + value) + 110), -Math.cos((i * 0.5) / 180 * Math.PI) * (75 + value) + 110);
+            cxt.lineTo((Math.sin((i * 0.5) / 180 * Math.PI) * (60 + value) + 110), -Math.cos((i * 0.5) / 180 * Math.PI) * (60 + value) + 110);
             cxt.strokeStyle = gradient;
             cxt.stroke();
         }
