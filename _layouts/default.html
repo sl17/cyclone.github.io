@@ -27,21 +27,21 @@
     var d = new Date().getDate();
     document.getElementsByTagName("body")[0].style.backgroundImage = 'url(/cyclone.github.io/assets/img/bg/bg' + d + '.jpg)';
     document.addEventListener('mousemove', showMousePosition, false);
-    let bodyWidth = document.body.clientWidth
-    let bodyHeight = document.body.clientHeight
+    let bodyWidth = document.body.clientWidth;
+    let bodyHeight = document.body.clientHeight;
     window.onresize = function () {
         bodyWidth = document.body.clientWidth;
         bodyHeight = document.body.clientHeight;
-    }
+    };
     let bodyWidthHalf = bodyWidth / 2;
     let bodyHeightHalf = bodyHeight / 2;
-    let [diffW, diffH] = [0, 0]
+    let [diffW, diffH] = [0, 0];
     function showMousePosition(event) {
         diffW = bodyWidthHalf - event.clientX;
         diffH = bodyHeightHalf - event.clientY;
-        document.getElementsByTagName("body")[0].style.backgroundPositionX = 50 + diffW * 0.01 + '%'
-        document.getElementsByTagName("body")[0].style.backgroundPositionY = 50 + diffH * 0.01 + '%'
-    }
+        document.getElementsByTagName("body")[0].style.backgroundPositionX = 50 + diffW * 0.01 + '%';
+        document.getElementsByTagName("body")[0].style.backgroundPositionY = 50 + diffH * 0.01 + '%';
+    };
     /*
         播放音乐
     */
@@ -66,8 +66,8 @@
         audio.src = src;
         audio.play();
         span.className = 'stop';
-        isT++
-    })
+        isT++;
+    });
     btn3.addEventListener('click', function () {
         if (num == (musicArr.length - 1)) { num = 0 };
         num++;
@@ -76,8 +76,8 @@
         audio.src = src;
         audio.play();
         span.className = 'stop';
-        isT++
-    })
+        isT++;
+    });
     btn.addEventListener('click', function () {
         audio.src = src;
         if (isT % 2 == 0) {
@@ -86,11 +86,10 @@
         } else {
             audio.pause();
             span.className = 'play';
-        }
-        isT++
-    })
+        };
+        isT++;
+    });
     audio.addEventListener('ended', function () {  
-      console.log('end')
         if (num == (musicArr.length - 1)) { num = 0 };
         num++;
         src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
@@ -98,7 +97,7 @@
         audio.src = src;
         audio.play();
         span.className = 'stop';
-        isT++
+        isT++;
     }, false);
     var wrap = document.getElementById("wrap");
     var cxt = wrap.getContext("2d");
@@ -146,7 +145,7 @@
             cxt.lineTo((Math.sin((i * 0.5) / 180 * Math.PI) * (60 + value) + 110), -Math.cos((i * 0.5) / 180 * Math.PI) * (60 + value) + 110);
             cxt.strokeStyle = gradient;
             cxt.stroke();
-        }
+        };
         //画一个小圆，将线条覆盖
         cxt.beginPath();
         cxt.lineWidth = 1;
