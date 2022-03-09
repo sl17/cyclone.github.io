@@ -125,30 +125,30 @@
             //绘制左半边
             cxt.beginPath();
             cxt.lineWidth = 1;
-            cxt.moveTo(110, 110);
-            cxt.lineTo(Math.cos((i * 0.5 + 90) / 180 * Math.PI) * (100 + value) + 110, (- Math.sin((i * 0.5 + 90) / 180 * Math.PI) * (100 + value) + 110));
+            cxt.moveTo(90, 90);
+            cxt.lineTo(Math.cos((i * 0.5 + 90) / 180 * Math.PI) * (100 + value) + 90, (- Math.sin((i * 0.5 + 90) / 180 * Math.PI) * (100 + value) + 90));
             cxt.stroke();
             //绘制右半边
             cxt.beginPath();
             cxt.lineWidth = 1;
-            cxt.moveTo(110, 110);
-            cxt.lineTo((Math.sin((i * 0.5) / 180 * Math.PI) * (100 + value) + 110), -Math.cos((i * 0.5) / 180 * Math.PI) * (100 + value) + 110);
+            cxt.moveTo(90, 90);
+            cxt.lineTo((Math.sin((i * 0.5) / 180 * Math.PI) * (100 + value) + 90), -Math.cos((i * 0.5) / 180 * Math.PI) * (100 + value) + 90);
             cxt.strokeStyle = gradient;
             cxt.stroke();
         }
         //画一个小圆，将线条覆盖
         cxt.beginPath();
         cxt.lineWidth = 1;
-        cxt.arc(110, 110, 100, 0, 2 * Math.PI, false);
+        cxt.arc(90, 90, 80, 0, 2 * Math.PI, false);
         cxt.fillStyle = "#f5fdff";
         cxt.stroke();
         cxt.fill();
         //将缓冲区的数据绘制到Canvas上 
         analyser.getByteTimeDomainData(output2);
-        var height = 100, width = 200;
+        var height = 90, width = 180;
         cxt.beginPath();
         for (var i = 0; i < width; i++) {
-            cxt.lineTo(i + 10, 110 - (height / 2 * (output2[output2.length * i / width | 0] / 256 - 0.5)));
+            cxt.lineTo(i + 10, 90 - (height / 2 * (output2[output2.length * i / width | 0] / 256 - 0.5)));
         }
         cxt.strokeStyle = gradient;
         cxt.stroke();
