@@ -58,11 +58,12 @@
   src = '/cyclone.github.io/assets/music/'+musicArr[num].value+'.mp3';
   waterText.innerText = musicArr[num].name;
   let audio = '';
+	function changeAudio(src){audio =new Audio(src) }
   btn1.addEventListener('click', function(){
     if(num==0){num = musicArr.length-1};
     num--;
     src = '/cyclone.github.io/assets/music/'+musicArr[num].value+'.mp3';
-	  audio = new Audio('./assets/music/'+musicArr[num].value+'.mp3');
+	  changeAudio('./assets/music/'+musicArr[num].value+'.mp3');
     waterText.innerText = musicArr[num].name;
     audio.play();
     span.className = 'stop';
@@ -72,17 +73,16 @@
     if(num==(musicArr.length-1)){num = 0};
     num++;
     src = '/cyclone.github.io/assets/music/'+musicArr[num].value+'.mp3';
-	  audio = new Audio('./assets/music/'+musicArr[num].value+'.mp3');
+	  changeAudio('./assets/music/'+musicArr[num].value+'.mp3');
     waterText.innerText = musicArr[num].name;
-	  audio.pause();
     audio.play();
     span.className = 'stop';
     isT++
   })
   btn.addEventListener('click', function(){
-	  audio = new Audio('./assets/music/'+musicArr[num].value+'.mp3');
+	 changeAudio('./assets/music/'+musicArr[num].value+'.mp3');
       if(isT%2==0){
-	      audio.pause();
+	     
 	  audio.play();
           span.className = 'stop';
       }else{
