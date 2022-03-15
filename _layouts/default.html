@@ -59,7 +59,7 @@
     waterText.innerText = musicArr[num].name;
     let audio = new Audio();
     btn1.addEventListener('click', function () {
-        if (num < 0) { num = musicArr.length };
+        if (num < 1) { num = musicArr.length };
         num--;
         src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
         waterText.innerText = musicArr[num].name;
