@@ -70,7 +70,7 @@
         isT++;
     });
     btn3.addEventListener('click', function () {
-        if (num == musicArr.length) { num = -1 };
+        if (num == musicArr.length-1) { num = -1 };
         num++;
         src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
         waterText.innerText = musicArr[num].name;
@@ -91,7 +91,7 @@
         isT++;
     });
     audio.addEventListener('ended', function () {  
-        if (num == musicArr.length) { num = -1 };
+        if (num == musicArr.length-1) { num = -1 };
         num++;
         src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
         waterText.innerText = musicArr[num].name;
