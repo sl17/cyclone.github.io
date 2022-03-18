@@ -94,7 +94,7 @@
             audio.pause();
             span.className = 'play';
         };
-        
+        isClick = false;
     });
     audio.addEventListener('ended', function () {  
         if (num == musicArr.length-1) { num = -1 };
