@@ -56,7 +56,8 @@
         isT = 0,
         span = document.querySelector('#btn span'),
         waterText = document.querySelector('.water_text'),
-        src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
+        src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3',
+        isClick=false;
     waterText.innerText = musicArr[num].name;
     let audio = new Audio();
     btn1.addEventListener('click', function () {
@@ -67,6 +68,7 @@
         audio.src = src;
         audio.play();
         span.className = 'stop';
+        isClick = true;
         isT+=2;
     });
     btn3.addEventListener('click', function () {
@@ -77,11 +79,14 @@
         audio.src = src;
         audio.play();
         span.className = 'stop';
+        isClick = true;
         isT+=2;
     });
     btn.addEventListener('click', function () {
         audio.src = src;
-        isT++;
+        if (!isClick){
+            isT++;
+        }
         if (isT % 2 != 0) {
             audio.play();
             span.className = 'stop';
