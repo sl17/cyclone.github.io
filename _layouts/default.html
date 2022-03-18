@@ -81,14 +81,15 @@
     });
     btn.addEventListener('click', function () {
         audio.src = src;
-        if (isT % 2 == 0) {
+        isT++;
+        if (isT % 2 != 0) {
             audio.play();
             span.className = 'stop';
         } else {
             audio.pause();
             span.className = 'play';
         };
-        isT++;
+        
     });
     audio.addEventListener('ended', function () {  
         if (num == musicArr.length-1) { num = -1 };
