@@ -77,7 +77,7 @@
         audio.src = src;
         audio.play();
         span.className = 'stop';
-        isT++;
+        isT+=2;
     });
     btn.addEventListener('click', function () {
         audio.src = src;
@@ -88,7 +88,7 @@
             audio.pause();
             span.className = 'play';
         };
-        isT++;
+        isT+=2;
     });
     audio.addEventListener('ended', function () {  
         if (num == musicArr.length-1) { num = -1 };
@@ -98,7 +98,7 @@
         audio.src = src;
         audio.play();
         span.className = 'stop';
-        isT++;
+        isT+=2;
     }, false);
     var wrap = document.getElementById("wrap");
     var cxt = wrap.getContext("2d");
