@@ -1,5 +1,9 @@
 ---
-published: false
+published: true
+layout: post
+date: '2019-04-29 13:32:20 +0300'
+tags:
+  - Vue
 ---
 ## Vue中$router.replace和$router.push的区别
 
