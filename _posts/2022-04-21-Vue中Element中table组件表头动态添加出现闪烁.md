@@ -24,6 +24,6 @@ beforeUpdate(){
     this.$nextTick(()=>{
       this.$refs['table'].doLayout()
     })
-  }
+  } 
 ```
 
