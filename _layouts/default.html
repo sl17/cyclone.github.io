@@ -139,16 +139,16 @@
       return result;
     }
     (function drawSpectrum() {
-
+        let nColorList = shuffle(colorList)
         analyser.getByteFrequencyData(output);//获取频域数据
         cxt.clearRect(0, 0, wrap.width, wrap.height);
         //var gradient = cxt.createLinearGradient(40, 40, 180, 180);
         var gradient = cxt.createLinearGradient(40, 40, 180, 180);
-        gradient.addColorStop("0.1", shuffle(colorList)[0]);
-        gradient.addColorStop("0.4", shuffle(colorList)[1]);
-        gradient.addColorStop("0.5", shuffle(colorList)[2]);
-        gradient.addColorStop("0.7", shuffle(colorList)[3]);
-        gradient.addColorStop("1.0", shuffle(colorList)[4]);
+        gradient.addColorStop("0.1", nColorList[0]);
+        gradient.addColorStop("0.4", nColorList[1]);
+        gradient.addColorStop("0.5", nColorList[2]);
+        gradient.addColorStop("0.7", nColorList[3]);
+        gradient.addColorStop("1.0", nColorList[4]);
         //画线条
         for (var i = 0; i < output.length; i++) {
             var value = output[i] / 10;
