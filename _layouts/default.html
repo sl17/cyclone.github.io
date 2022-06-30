@@ -128,8 +128,9 @@
     var length = analyser.frequencyBinCount * 44100 / context.sampleRate | 0;
     //创建数据 
     var output2 = new Uint8Array(length);
-    let colorList = ["#fd5353","#fea781","#dd57ff","#5febff","#717cf9"]
-    function shuffle(arr) {
+    
+    function shuffle() {
+      let arr = ["#fd5353","#fea781","#dd57ff","#5febff","#717cf9"]
       let result = [],random;
       while (arr.length > 0) {
         random = Math.floor(Math.random() * arr.length);
@@ -139,7 +140,7 @@
       return result;
     }
     (function drawSpectrum() {
-        let nColorList = shuffle(colorList)
+        let nColorList = shuffle()
         analyser.getByteFrequencyData(output);//获取频域数据
         cxt.clearRect(0, 0, wrap.width, wrap.height);
         //var gradient = cxt.createLinearGradient(40, 40, 180, 180);
