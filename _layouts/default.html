@@ -131,14 +131,15 @@
     
     function shuffle() {
       let arr = ["#fd5353","#fea781","#dd57ff","#5febff","#717cf9"]
-      let nArr = JSON.parse(JSON.stringify(arr))
-      let result = [],random;
-      while (nArr.length > 0) {
-        random = Math.floor(Math.random() * nArr.length);
-        result.push(nArr[random])
-        nArr.splice(random, 1)
-      }
-      return result;
+//       let nArr = JSON.parse(JSON.stringify(arr))
+//       let result = [],random;
+//       while (nArr.length > 0) {
+//         random = Math.floor(Math.random() * nArr.length);
+//         result.push(nArr[random])
+//         nArr.splice(random, 1)
+//       }
+//      return result;
+      return arr;
     }
     (function drawSpectrum() {
         let nColorList = shuffle()
