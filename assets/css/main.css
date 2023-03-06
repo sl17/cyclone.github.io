@@ -1727,3 +1727,70 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
     border: 1px solid #6d6d6d;
     border-radius: 4px;
 }
+#btn4 div {
+    width: 12px;
+    margin: 0 auto;
+}
+
+#btn4 div span {
+    display: inline-block;
+    height: 10px;
+    width: 12px;
+    box-sizing: border-box;
+}
+
+/* 列表 */
+#btn4 div span.list {
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+    background-image: linear-gradient(0, transparent 2px, #333 2px 4px, transparent 4px);
+}
+
+/* random  随机 */
+#btn4 div span.random {
+    background-image: linear-gradient(39deg, transparent 42%, #333 42% 57%, transparent 59%);
+    position: relative;
+    overflow: hidden;
+}
+
+#btn4 div span.random::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: 12px;
+    background-image: linear-gradient(-39deg, transparent 37%, #fff 35% 41%, #333 45% 57%, #fff 58% 64%, transparent 64%);
+}
+
+#btn4 div span.random::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    height: 13px;
+    width: 12px;
+    border-top: 2px solid #333;
+    border-right: 3px solid #333;
+    transform: rotate(37deg) skewX(-9deg);
+    left: -2px;
+    top: -2px;
+    z-index: 1;
+}
+
+/* single 单曲 */
+#btn4 div span.single {
+    border: 2px solid #333;
+    border-radius: 5px 0 5px 0;
+    position: relative;
+}
+
+#btn4 div span.single::after {
+    content: '1';
+    position: absolute;
+    top: -2px;
+    left: 0px;
+    font-size: 12px;
+    transform: scale(0.8);
+    font-weight: bold;
+}
