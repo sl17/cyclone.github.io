@@ -197,9 +197,33 @@
         };
         isClick = false;
     });
+    let btn4 = document.getElementById('btn4')
+    let span4 = document.querySelector('#btn4 span')
+    let status = 0;
+    let n = 0;
+    btn4.addEventListener('click', function () {
+        n++;
+        status = n % 3;
+        if (status == 0) {
+            span4.className = 'list';
+        } else if (status == 1) {
+            span4.className = 'random';
+        } else {
+            span4.className = 'single';
+        }
+    });
+    function getRNum(max,min){
+        return Math.floor(Math.random()*(max-min+1))+min;
+    }
     audio.addEventListener('ended', function () {  
-        if (num == musicArr.length-1) { num = -1 };
-        num++;
+        if(status==0){
+            if (num == musicArr.length - 1) { num = -1 };
+            num++;
+        }else if(status==1){
+            num = getRNum(1,(musicArr.length-1))
+        }else{
+            num = num;
+        }
         src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
         waterText.innerText = musicArr[num].name;
         audio.src = src;
