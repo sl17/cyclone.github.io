@@ -162,8 +162,15 @@
     waterText.innerText = musicArr[num].name;
     let audio = new Audio();
     btn1.addEventListener('click', function () {
-        if (num < 1) { num = musicArr.length };
-        num--;
+        if(status==0){
+          if (num < 1) { num = musicArr.length };
+          num--;
+        }else if(status==1){
+            num = getRNum(1,(musicArr.length-1))
+        }else{
+            num = num;
+        }
+        
         src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
         waterText.innerText = musicArr[num].name;
         audio.src = src;
@@ -173,8 +180,14 @@
         isT+=2;
     });
     btn3.addEventListener('click', function () {
-        if (num == musicArr.length-1) { num = -1 };
-        num++;
+        if(status==0){
+          if (num == musicArr.length-1) { num = -1 };
+          num++;
+        }else if(status==1){
+            num = getRNum(1,(musicArr.length-1))
+        }else{
+            num = num;
+        }
         src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
         waterText.innerText = musicArr[num].name;
         audio.src = src;
