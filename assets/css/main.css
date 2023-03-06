@@ -1581,7 +1581,7 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
     display: none;
   }
   .center{display: none}
-  #btn1,#btn,#btn3{
+  #btn1,#btn,#btn3,#btn4{
     width:60px;
     height:36px;
   }
@@ -1615,7 +1615,7 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
     font-size: 21px;
   }
   .center{display: none}
-  #btn1,#btn,#btn3{
+  #btn1,#btn,#btn3,#btn4{
     width:60px;
     height:36px;
   }
@@ -1722,7 +1722,7 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
     right: 100%;
 }
 }
-#btn1,#btn,#btn3{
+#btn1,#btn,#btn3,#btn4{
     background: #fff;
     border: 1px solid #6d6d6d;
     border-radius: 4px;
