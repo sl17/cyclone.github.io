@@ -1581,6 +1581,10 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
     display: none;
   }
   .center{display: none}
+  #btn1,#btn,#btn3{
+    width:60px;
+    height:36px;
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -1611,6 +1615,10 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
     font-size: 21px;
   }
   .center{display: none}
+  #btn1,#btn,#btn3{
+    width:60px;
+    height:36px;
+  }
 }
 .prev{
 	display: inline-block;
