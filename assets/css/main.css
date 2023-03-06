@@ -1773,8 +1773,8 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
     border-top: 2px solid #333;
     border-right: 3px solid #333;
     transform: rotate(37deg) skewX(-9deg);
-    left: -2px;
-    top: -2px;
+    left: 1px;
+    top: -1px;
     z-index: 1;
 }
 
