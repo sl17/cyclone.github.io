@@ -165,9 +165,9 @@
         isT = 0,
         span = document.querySelector('#btn span'),
         waterText = document.querySelector('.water_text'),
-        src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3',
         isClick=false;
-    let musicArr = JSON.parse(JSON.stringify(musicArrDef));
+    let musicArr = JSON.parse(JSON.stringify(musicArrDef)),
+        src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
     waterText.innerText = musicArr[num].name;
     let audio = new Audio();
     btn1.addEventListener('click', function () {
