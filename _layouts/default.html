@@ -176,8 +176,9 @@
             if (num < 1) { num = musicArr.length };
             num--;
         }else if(status==1){
-            num = getRNum(1,(musicArr.length-1))
-            musicArr.splice(num,1)
+            num = getRNum(1,(musicArr.length-1));
+            musicArr.splice(num,1);
+            if(musicArr.length==0){musicArr = musicArrDef;}
         }else{
             musicArr = musicArrDef;
             num = num;
@@ -197,8 +198,9 @@
             if (num == musicArr.length-1) { num = -1 };
             num++;
         }else if(status==1){
-            num = getRNum(1,(musicArr.length-1))
-            musicArr.splice(num,1)
+            num = getRNum(1,(musicArr.length-1));
+            musicArr.splice(num,1);
+            if(musicArr.length==0){musicArr = musicArrDef;} 
         }else{
             musicArr = musicArrDef;
             num = num;
@@ -251,6 +253,7 @@
         }else if(status==1){
             num = getRNum(1,(musicArr.length-1))
             musicArr.splice(num,1)
+            if(musicArr.length==0){musicArr = musicArrDef;}
         }else{
             musicArr = musicArrDef;
             num = num;
