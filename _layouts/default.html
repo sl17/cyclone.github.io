@@ -48,7 +48,7 @@
     let btn1 = document.getElementById("btn1"),
         btn = document.getElementById("btn"),
         btn3 = document.getElementById("btn3"),
-        musicArr = [
+        musicArrDef = [
             { name: '叹-黄玲', value: '00001' },
             { name: '哭泣站台-王小帅', value: '00002' },
             { name: '广寒宫-丸子呦', value: '00003' },
@@ -167,15 +167,19 @@
         waterText = document.querySelector('.water_text'),
         src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3',
         isClick=false;
+    let musicArr = JSON.parse(JSON.stringify(musicArrDef));
     waterText.innerText = musicArr[num].name;
     let audio = new Audio();
     btn1.addEventListener('click', function () {
         if(status==0){
-          if (num < 1) { num = musicArr.length };
-          num--;
+            musicArr = musicArrDef;
+            if (num < 1) { num = musicArr.length };
+            num--;
         }else if(status==1){
             num = getRNum(1,(musicArr.length-1))
+            musicArr.splice(num,1)
         }else{
+            musicArr = musicArrDef;
             num = num;
         }
         
@@ -189,11 +193,14 @@
     });
     btn3.addEventListener('click', function () {
         if(status==0){
-          if (num == musicArr.length-1) { num = -1 };
-          num++;
+            musicArr = musicArrDef;
+            if (num == musicArr.length-1) { num = -1 };
+            num++;
         }else if(status==1){
             num = getRNum(1,(musicArr.length-1))
+            musicArr.splice(num,1)
         }else{
+            musicArr = musicArrDef;
             num = num;
         }
         src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
@@ -238,11 +245,14 @@
     }
     audio.addEventListener('ended', function () {  
         if(status==0){
+            musicArr = musicArrDef;
             if (num == musicArr.length - 1) { num = -1 };
             num++;
         }else if(status==1){
             num = getRNum(1,(musicArr.length-1))
+            musicArr.splice(num,1)
         }else{
+            musicArr = musicArrDef;
             num = num;
         }
         src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
