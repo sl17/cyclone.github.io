@@ -198,7 +198,6 @@
         audio.play();
         span.className = 'stop';
         isClick = true;
-//         isT+=2;
     });
     btn3.addEventListener('click', function () {
         if(status==0){
@@ -219,21 +218,17 @@
         audio.play();
         span.className = 'stop';
         isClick = true;
-//         isT+=2;
     });
     btn.addEventListener('click', function () {
         audio.src = src;
-//         if (!isClick){
-            isT+=1;
-//         }
-        if (isT % 2 != 0) {
+        if (!isClick) {
             audio.play();
             span.className = 'stop';
         } else {
             audio.pause();
             span.className = 'play';
         };
-        isClick = false;
+        isClick = !isClick;
     });
     let btn4 = document.getElementById('btn4')
     let span4 = document.querySelector('#btn4 span')
@@ -271,7 +266,7 @@
         audio.src = src;
         audio.play();
         span.className = 'stop';
-//         isT+=2;
+        isClick = true;
     }, false);
     var wrap = document.getElementById("wrap");
     var cxt = wrap.getContext("2d");
