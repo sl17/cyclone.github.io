@@ -30,8 +30,10 @@
     let bodyWidth = document.body.clientWidth;
     let bodyHeight = document.body.clientHeight;
     window.onresize = function () {
-        bodyWidth = document.body.clientWidth;
-        bodyHeight = document.body.clientHeight;
+//         bodyWidth = document.body.clientWidth;
+//         bodyHeight = document.body.clientHeight;
+        bodyHeight = window.innerHeight;
+        bodyHeight = window.innerWidth;
     };
     let bodyWidthHalf = bodyWidth / 2;
     let bodyHeightHalf = bodyHeight / 2;
