@@ -1454,6 +1454,7 @@ to{right: 13px;top: 35px;}
 transform: scaleX(.6);}
 .center .page{width: 50px;height: 150px;position: absolute;left: -25px;top: 20px;color: #1cedf7;background-image: linear-gradient(45deg, #4fccff36,#ffffff36, #ff800042);backface-visibility: hidden;border-left: 1px solid #ff7301;border-right: 1px solid #e0ff01;border-top: 2px solid #ff7301;;writing-mode: vertical-lr;writing-mode: tb-lr;text-align: center;line-height: 50px;transform-origin:0 0;perspective:1500;
 -webkit-perspective:1500; transform-style: preserve-3d;}
+.center .page canvas{position: absolute;left:0;bottom:0;}
 .center .page1{transform: translateZ(45px);color: #fe6864;}
 .center .page1:before,
 .center .page3:before,
@@ -1463,6 +1464,7 @@ transform: scaleX(.6);}
 .center .page4{transform:rotateY(180deg) translateZ(52px) translateX(-52px);height: 160px;color: #ba89ff;}
 .center .page5{left: -30px;transform: rotateY(240deg) translateZ(23px) translateX(-45px);height: 155px;}
 .center .page6{left: -30px;transform: rotateY(-60deg) translateZ(20px) translateX(-14px);color: #0292fd;}
+
 @keyframes rot{
 from{transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg);left: 34px;}
 15%{left: 36px;}
