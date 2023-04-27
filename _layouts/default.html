@@ -371,8 +371,8 @@
         spacing = 0,//间距
         meterNum = cwidth / (meterWidth + (spacing - 2)),//计数
         capYPositionArray = []; ////存储前一帧的大写字母的垂直位置
-        // loop
-        (function renderFrame() {
+    // loop
+    (function renderFrame() {
         var ctx = canvas.getContext('2d'),
         gradient = ctx.createLinearGradient(0, 0, 0, cheight + 2);
         gradient.addColorStop(1, '#0084ff');
