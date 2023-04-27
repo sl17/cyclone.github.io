@@ -402,7 +402,7 @@
             ctx.fillStyle = gradient; //将filllStyle设置为渐变以获得更好的外观
             ctx.fillRect(i * spacing /*meterWidth+gap*/, cheight - value / gap + capHeight, meterWidth, cheight); //the meter
         }
-        requestAnimationFrame(renderFrame);
+        requestAnimationFrame(renderFrame(dom));
     };
     renderFrame(canvas)
     
