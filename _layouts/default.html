@@ -356,19 +356,22 @@
   
 //   audio
     
-    var ctx = new window.AudioContext();
-    var analyserH = ctx.createAnalyser();
-    var audioSrc = ctx.createMediaElementSource(audio);
-    // 我们必须将MediaElementSource与分析器连接起来 
-    audioSrc.connect(analyserH);
-    analyserH.connect(ctx.destination);
-    // 我们可以配置分析仪：例如 analyser.fftSize（有关更多信息，请阅读规范）
-    // analyser.fftSize = 64;
-    // frequencyBinCount 告诉您从分析仪接收的值的数量
-    var frequencyData = new Uint8Array(analyserH.frequencyBinCount);
+    
+    // loop
+    function renderFrame() {
+        var ctx = new window.AudioContext();
+        var analyserH = ctx.createAnalyser();
+        var audioSrc = ctx.createMediaElementSource(audio);
+        // 我们必须将MediaElementSource与分析器连接起来 
+        audioSrc.connect(analyserH);
+        analyserH.connect(ctx.destination);
+        // 我们可以配置分析仪：例如 analyser.fftSize（有关更多信息，请阅读规范）
+        // analyser.fftSize = 64;
+        // frequencyBinCount 告诉您从分析仪接收的值的数量
+        var frequencyData = new Uint8Array(analyserH.frequencyBinCount);
         
     // 我们已准备好接收一些数据！
-    var canvas = document.getElementById('canvas'),
+        var canvas = document.getElementById('canvas'),
         cwidth = canvas.width,
         cheight = canvas.height - 2,
         meterWidth = 1, //频谱中的米宽
@@ -380,17 +383,15 @@
         meterNum = cwidth / (meterWidth + (spacing-2)), 
             
         capYPositionArray = []; ////存储前一帧的大写字母的垂直位置
-    ctx = canvas.getContext('2d'),
-    gradient.addColorStop(1, '#0084ff');
-    gradient.addColorStop(0.9, '#01defc');
-    gradient.addColorStop(0.8, '#33eb05');
-    gradient.addColorStop(0.7, '#fffb00');
-    gradient.addColorStop(0.6, '#ff9204');
+        ctx = canvas.getContext('2d'),
+        gradient.addColorStop(1, '#0084ff');
+        gradient.addColorStop(0.9, '#01defc');
+        gradient.addColorStop(0.8, '#33eb05');
+        gradient.addColorStop(0.7, '#fffb00');
+        gradient.addColorStop(0.6, '#ff9204');
 
-    gradient.addColorStop(0.5, '#ff0404');
-    gradient.addColorStop(0, '#ff05ff');
-    // loop
-    function renderFrame() {
+        gradient.addColorStop(0.5, '#ff0404');
+        gradient.addColorStop(0, '#ff05ff');
         var array = new Uint8Array(analyserH.frequencyBinCount);
         analyserH.getByteFrequencyData(array);
         var step = Math.round(array.length * .68 / meterNum); //从总数组中抽取有限数据
