@@ -196,7 +196,7 @@
         src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
         waterText.innerText = musicArr[num].name;
         audio.src = src;
-        renderFrame();
+        renderFrame(audio);
         audio.play();
         span.className = 'stop';
         isClick = true;
@@ -217,7 +217,7 @@
         src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
         waterText.innerText = musicArr[num].name;
         audio.src = src;
-        renderFrame();
+        renderFrame(audio);
         audio.play();
         span.className = 'stop';
         isClick = true;
@@ -225,7 +225,7 @@
     btn.addEventListener('click', function () {
         audio.src = src;
         if (!isClick) {
-            renderFrame();
+            renderFrame(audio);
             audio.play();
             span.className = 'stop';
         } else {
@@ -268,7 +268,7 @@
         src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
         waterText.innerText = musicArr[num].name;
         audio.src = src;
-        renderFrame();
+        renderFrame(audio);
         audio.play();
         span.className = 'stop';
         isClick = true;
@@ -358,7 +358,7 @@
     
     
     // loop
-    function renderFrame() {
+    function renderFrame(audio) {
         window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;
         var ctx = new window.AudioContext();
         var analyserH = ctx.createAnalyser();
