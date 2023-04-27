@@ -372,7 +372,7 @@
         meterNum = cwidth / (meterWidth + (spacing - 2)),//计数
         capYPositionArray = []; ////存储前一帧的大写字母的垂直位置
         // loop
-    (function renderFrame(dom) {
+    function renderFrame(dom) {
         var ctx = dom.getContext('2d'),
         gradient = ctx.createLinearGradient(0, 0, 0, cheight + 2);
         gradient.addColorStop(1, '#0084ff');
@@ -403,7 +403,7 @@
             ctx.fillRect(i * spacing /*meterWidth+gap*/, cheight - value / gap + capHeight, meterWidth, cheight); //the meter
         }
         requestAnimationFrame(renderFrame);
-    });
+    };
     renderFrame(canvas)
     
 </script>
