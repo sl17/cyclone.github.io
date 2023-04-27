@@ -359,6 +359,7 @@
     
     // loop
     function renderFrame() {
+        window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;
         var ctx = new window.AudioContext();
         var analyserH = ctx.createAnalyser();
         var audioSrc = ctx.createMediaElementSource(audio);
@@ -370,7 +371,7 @@
         // frequencyBinCount 告诉您从分析仪接收的值的数量
         var frequencyData = new Uint8Array(analyserH.frequencyBinCount);
         
-    // 我们已准备好接收一些数据！
+        // 我们已准备好接收一些数据！
         var canvas = document.getElementById('canvas'),
         cwidth = canvas.width,
         cheight = canvas.height - 2,
