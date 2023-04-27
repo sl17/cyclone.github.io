@@ -278,11 +278,11 @@
     var context = new window.AudioContext();
     //加载媒体
   //------------------------------------------------------
-//     var ctx = new window.AudioContext();
-//     var analyser = ctx.createAnalyser();
-//     var audioSrc = ctx.createMediaElementSource(audio);
-//     audioSrc.connect(analyser);
-//     analyser.connect(ctx.destination);
+  //     var ctx = new window.AudioContext();
+  //     var analyser = ctx.createAnalyser();
+  //     var audioSrc = ctx.createMediaElementSource(audio);
+  //     audioSrc.connect(analyser);
+  //     analyser.connect(ctx.destination);
   //---------------------------------------------------------
 
     //创建节点
@@ -379,7 +379,6 @@
           gradient.addColorStop(0.8, '#33eb05');
           gradient.addColorStop(0.7, '#fffb00');
           gradient.addColorStop(0.6, '#ff9204');
-
           gradient.addColorStop(0.5, '#ff0404');
           gradient.addColorStop(0, '#ff05ff');
           var array = new Uint8Array(analyser.frequencyBinCount);
