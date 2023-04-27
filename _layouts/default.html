@@ -198,6 +198,7 @@
         src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
         waterText.innerText = musicArr[num].name;
         audio.src = src;
+        renderFrame();
         audio.play();
         span.className = 'stop';
         isClick = true;
@@ -218,6 +219,7 @@
         src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
         waterText.innerText = musicArr[num].name;
         audio.src = src;
+        renderFrame();
         audio.play();
         span.className = 'stop';
         isClick = true;
@@ -225,6 +227,7 @@
     btn.addEventListener('click', function () {
         audio.src = src;
         if (!isClick) {
+            renderFrame();
             audio.play();
             span.className = 'stop';
         } else {
@@ -268,6 +271,7 @@
         waterText.innerText = musicArr[num].name;
         audio.src = src;
         audio.play();
+        renderFrame();
         span.className = 'stop';
         isClick = true;
     }, false);
@@ -410,7 +414,7 @@
         }
         requestAnimationFrame(renderFrame);
     }
-    renderFrame();
+    
   
   
   
