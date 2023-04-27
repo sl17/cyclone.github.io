@@ -27,8 +27,8 @@
     var d = new Date().getDate();
     document.getElementsByTagName("body")[0].style.backgroundImage = 'url(/cyclone.github.io/assets/img/bg1/'+ d + '.jpg)';
     document.addEventListener('mousemove', showMousePosition, false);
-    let bodyWidth = document.body.clientWidth;
-    let bodyHeight = document.body.clientHeight;
+    let bodyWidth = window.innerWidth;
+    let bodyHeight = window.innerHeight;
     window.onresize = function () {
 //         bodyWidth = document.body.clientWidth;
 //         bodyHeight = document.body.clientHeight;
