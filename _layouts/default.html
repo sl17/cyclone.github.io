@@ -5,12 +5,11 @@
   <div class="center">
     <div class="j">
       <div class="page page1" id="page1">JAVASCRIPT <canvas id='canvas' width="50" height="60"></canvas></div>
-      <div class="page page2" id="page2">VUE</div>
-      <div class="page page3" id="page3">REACT</div>
-      <div class="page page4" id="page4">NODE</div>
-      <div class="page page5" id="page5">ES6</div>
-      <div class="page page6" id="page6">TYPESCRIPT</div>
-      <audio src="" controls id="audioDemo" autoplay style="display: none;"></audio>
+      <div class="page page2" id="page2">VUE <canvas id='canvas2' width="50" height="60"></canvas></div>
+      <div class="page page3" id="page3">REACT <canvas id='canvas3' width="50" height="60"></canvas></div>
+      <div class="page page4" id="page4">NODE <canvas id='canvas4' width="50" height="60"></canvas></div>
+      <div class="page page5" id="page5">ES6 <canvas id='canvas5' width="50" height="60"></canvas></div>
+      <div class="page page6" id="page6">TYPESCRIPT <canvas id='canvas6' width="50" height="60"></canvas></div>
 <!--   蜡烛暂时隐藏
       <div class="candle">
           <div class="flame"></div>
@@ -358,6 +357,11 @@
         requestAnimationFrame(drawSpectrum);
     })();
     var canvas = document.getElementById('canvas'),
+        canvas2 = document.getElementById('canvas2'),
+        canvas3 = document.getElementById('canvas3'),
+        canvas4 = document.getElementById('canvas4'),
+        canvas5 = document.getElementById('canvas5'),
+        canvas6 = document.getElementById('canvas6'),
         cwidth = canvas.width,
         cheight = 80,
         meterWidth = 1, //频谱中的米宽
@@ -399,6 +403,166 @@
             ctx.fillRect(i * spacing /*meterWidth+gap*/, cheight - value / gap + capHeight, meterWidth, cheight); //the meter
         }
         requestAnimationFrame(renderFrame);
+    })();
+    (function renderFrame2() {
+        var ctx = canvas2.getContext('2d'),
+        gradient = ctx.createLinearGradient(0, 0, 0, cheight + 2);
+        gradient.addColorStop(1, '#0084ff');
+        gradient.addColorStop(0.9, '#01defc');
+        gradient.addColorStop(0.8, '#33eb05');
+        gradient.addColorStop(0.7, '#fffb00');
+        gradient.addColorStop(0.6, '#ff9204');
+        gradient.addColorStop(0.5, '#ff0404');
+        gradient.addColorStop(0, '#ff05ff');
+        var array = new Uint8Array(analyser.frequencyBinCount);
+        analyser.getByteFrequencyData(array);
+        var step = Math.round(array.length * .68 / meterNum); //从总数组中抽取有限数据
+        ctx.clearRect(0, 0, cwidth, cheight);
+        for (var i = 0; i < meterNum; i++) {
+            var value = array[i * step];
+            if (capYPositionArray.length < Math.round(meterNum)) {
+                capYPositionArray.push(value);
+            };
+            ctx.fillStyle = capStyle;
+            //绘制帽子，具有过渡效果
+            if (value < capYPositionArray[i]) {
+                ctx.fillRect(i * spacing, cheight - (--capYPositionArray[i]) / gap, meterWidth, capHeight);
+            } else {
+                ctx.fillRect(i * spacing, cheight - value / gap, meterWidth, capHeight);
+                capYPositionArray[i] = value;
+            };
+            ctx.fillStyle = gradient; //将filllStyle设置为渐变以获得更好的外观
+            ctx.fillRect(i * spacing /*meterWidth+gap*/, cheight - value / gap + capHeight, meterWidth, cheight); //the meter
+        }
+        requestAnimationFrame(renderFrame2);
+    })();
+    (function renderFrame3() {
+        var ctx = canvas3.getContext('2d'),
+        gradient = ctx.createLinearGradient(0, 0, 0, cheight + 2);
+        gradient.addColorStop(1, '#0084ff');
+        gradient.addColorStop(0.9, '#01defc');
+        gradient.addColorStop(0.8, '#33eb05');
+        gradient.addColorStop(0.7, '#fffb00');
+        gradient.addColorStop(0.6, '#ff9204');
+        gradient.addColorStop(0.5, '#ff0404');
+        gradient.addColorStop(0, '#ff05ff');
+        var array = new Uint8Array(analyser.frequencyBinCount);
+        analyser.getByteFrequencyData(array);
+        var step = Math.round(array.length * .68 / meterNum); //从总数组中抽取有限数据
+        ctx.clearRect(0, 0, cwidth, cheight);
+        for (var i = 0; i < meterNum; i++) {
+            var value = array[i * step];
+            if (capYPositionArray.length < Math.round(meterNum)) {
+                capYPositionArray.push(value);
+            };
+            ctx.fillStyle = capStyle;
+            //绘制帽子，具有过渡效果
+            if (value < capYPositionArray[i]) {
+                ctx.fillRect(i * spacing, cheight - (--capYPositionArray[i]) / gap, meterWidth, capHeight);
+            } else {
+                ctx.fillRect(i * spacing, cheight - value / gap, meterWidth, capHeight);
+                capYPositionArray[i] = value;
+            };
+            ctx.fillStyle = gradient; //将filllStyle设置为渐变以获得更好的外观
+            ctx.fillRect(i * spacing /*meterWidth+gap*/, cheight - value / gap + capHeight, meterWidth, cheight); //the meter
+        }
+        requestAnimationFrame(renderFrame3);
+    })();
+    (function renderFrame4() {
+        var ctx = canvas4.getContext('2d'),
+        gradient = ctx.createLinearGradient(0, 0, 0, cheight + 2);
+        gradient.addColorStop(1, '#0084ff');
+        gradient.addColorStop(0.9, '#01defc');
+        gradient.addColorStop(0.8, '#33eb05');
+        gradient.addColorStop(0.7, '#fffb00');
+        gradient.addColorStop(0.6, '#ff9204');
+        gradient.addColorStop(0.5, '#ff0404');
+        gradient.addColorStop(0, '#ff05ff');
+        var array = new Uint8Array(analyser.frequencyBinCount);
+        analyser.getByteFrequencyData(array);
+        var step = Math.round(array.length * .68 / meterNum); //从总数组中抽取有限数据
+        ctx.clearRect(0, 0, cwidth, cheight);
+        for (var i = 0; i < meterNum; i++) {
+            var value = array[i * step];
+            if (capYPositionArray.length < Math.round(meterNum)) {
+                capYPositionArray.push(value);
+            };
+            ctx.fillStyle = capStyle;
+            //绘制帽子，具有过渡效果
+            if (value < capYPositionArray[i]) {
+                ctx.fillRect(i * spacing, cheight - (--capYPositionArray[i]) / gap, meterWidth, capHeight);
+            } else {
+                ctx.fillRect(i * spacing, cheight - value / gap, meterWidth, capHeight);
+                capYPositionArray[i] = value;
+            };
+            ctx.fillStyle = gradient; //将filllStyle设置为渐变以获得更好的外观
+            ctx.fillRect(i * spacing /*meterWidth+gap*/, cheight - value / gap + capHeight, meterWidth, cheight); //the meter
+        }
+        requestAnimationFrame(renderFrame4);
+    })();
+    (function renderFrame5() {
+        var ctx = canvas5.getContext('2d'),
+        gradient = ctx.createLinearGradient(0, 0, 0, cheight + 2);
+        gradient.addColorStop(1, '#0084ff');
+        gradient.addColorStop(0.9, '#01defc');
+        gradient.addColorStop(0.8, '#33eb05');
+        gradient.addColorStop(0.7, '#fffb00');
+        gradient.addColorStop(0.6, '#ff9204');
+        gradient.addColorStop(0.5, '#ff0404');
+        gradient.addColorStop(0, '#ff05ff');
+        var array = new Uint8Array(analyser.frequencyBinCount);
+        analyser.getByteFrequencyData(array);
+        var step = Math.round(array.length * .68 / meterNum); //从总数组中抽取有限数据
+        ctx.clearRect(0, 0, cwidth, cheight);
+        for (var i = 0; i < meterNum; i++) {
+            var value = array[i * step];
+            if (capYPositionArray.length < Math.round(meterNum)) {
+                capYPositionArray.push(value);
+            };
+            ctx.fillStyle = capStyle;
+            //绘制帽子，具有过渡效果
+            if (value < capYPositionArray[i]) {
+                ctx.fillRect(i * spacing, cheight - (--capYPositionArray[i]) / gap, meterWidth, capHeight);
+            } else {
+                ctx.fillRect(i * spacing, cheight - value / gap, meterWidth, capHeight);
+                capYPositionArray[i] = value;
+            };
+            ctx.fillStyle = gradient; //将filllStyle设置为渐变以获得更好的外观
+            ctx.fillRect(i * spacing /*meterWidth+gap*/, cheight - value / gap + capHeight, meterWidth, cheight); //the meter
+        }
+        requestAnimationFrame(renderFrame5);
+    })();
+    (function renderFrame6() {
+        var ctx = canvas6.getContext('2d'),
+        gradient = ctx.createLinearGradient(0, 0, 0, cheight + 2);
+        gradient.addColorStop(1, '#0084ff');
+        gradient.addColorStop(0.9, '#01defc');
+        gradient.addColorStop(0.8, '#33eb05');
+        gradient.addColorStop(0.7, '#fffb00');
+        gradient.addColorStop(0.6, '#ff9204');
+        gradient.addColorStop(0.5, '#ff0404');
+        gradient.addColorStop(0, '#ff05ff');
+        var array = new Uint8Array(analyser.frequencyBinCount);
+        analyser.getByteFrequencyData(array);
+        var step = Math.round(array.length * .68 / meterNum); //从总数组中抽取有限数据
+        ctx.clearRect(0, 0, cwidth, cheight);
+        for (var i = 0; i < meterNum; i++) {
+            var value = array[i * step];
+            if (capYPositionArray.length < Math.round(meterNum)) {
+                capYPositionArray.push(value);
+            };
+            ctx.fillStyle = capStyle;
+            //绘制帽子，具有过渡效果
+            if (value < capYPositionArray[i]) {
+                ctx.fillRect(i * spacing, cheight - (--capYPositionArray[i]) / gap, meterWidth, capHeight);
+            } else {
+                ctx.fillRect(i * spacing, cheight - value / gap, meterWidth, capHeight);
+                capYPositionArray[i] = value;
+            };
+            ctx.fillStyle = gradient; //将filllStyle设置为渐变以获得更好的外观
+            ctx.fillRect(i * spacing /*meterWidth+gap*/, cheight - value / gap + capHeight, meterWidth, cheight); //the meter
+        }
+        requestAnimationFrame(renderFrame6);
     })();
 </script>
 </html>
