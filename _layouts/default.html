@@ -383,13 +383,16 @@
 
             capYPositionArray = []; ////存储前一帧的大写字母的垂直位置
         ctx = canvas.getContext('2d'),
-            gradient = ctx.createLinearGradient(0, 0, 0, cheight + 2);
-        gradient.addColorStop(1, '#00f7ff');
-        gradient.addColorStop(0.9, '#18ff05');
-        gradient.addColorStop(0.7, '#c4ff00');
+        gradient = ctx.createLinearGradient(0, 0, 0, cheight + 2);
+        gradient.addColorStop(1, '#0084ff');
+        gradient.addColorStop(0.9, '#01defc');
+        gradient.addColorStop(0.8, '#33eb05');
+        gradient.addColorStop(0.7, '#fffb00');
+        gradient.addColorStop(0.6, '#ff9204');
 
-        gradient.addColorStop(0.5, '#ffff04');
-        gradient.addColorStop(0, '#ff0404');
+        gradient.addColorStop(0.5, '#ff0404');
+        gradient.addColorStop(0, '#ff05ff');
+        
         // loop
         function renderFrame() {
             var array = new Uint8Array(analyser.frequencyBinCount);
