@@ -352,12 +352,11 @@
     })();
   
 
-</script>
- <script type="text/javascript">
+    
     window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext;
-    window.onload = function () {
-        var audio = document.getElementById('audioDemo');
-        audio.src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
+
+        //var audioH = document.getElementById('audioDemo');
+        //audio.src = '/cyclone.github.io/assets/music/' + musicArr[num].value + '.mp3';
         var ctx = new AudioContext();
         var analyser = ctx.createAnalyser();
         var audioSrc = ctx.createMediaElementSource(audio);
@@ -418,7 +417,7 @@
             requestAnimationFrame(renderFrame);
         }
         renderFrame();
-        audio.play();
-    };
+       
+    
 </script>
 </html>
