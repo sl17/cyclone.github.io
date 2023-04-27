@@ -4,7 +4,7 @@
 <body>
   <div class="center">
     <div class="j">
-      <div class="page page1" id="page1">JAVASCRIPT</div>
+      <div class="page page1" id="page1">JAVASCRIPT <canvas id='canvas' width="200" height="50"></canvas></div>
       <div class="page page2" id="page2">VUE</div>
       <div class="page page3" id="page3">REACT</div>
       <div class="page page4" id="page4">NODE</div>
@@ -351,5 +351,70 @@
         //请求下一帧
         requestAnimationFrame(drawSpectrum);
     })();
+  
+//   audio
+    
+    var ctx = new AudioContext();
+    var analyserH = ctx.createAnalyser();
+    var audioSrc = ctx.createMediaElementSource(audio);
+    // 我们必须将MediaElementSource与分析器连接起来 
+    audioSrc.connect(analyserH);
+    analyserH.connect(ctx.destination);
+    // 我们可以配置分析仪：例如 analyser.fftSize（有关更多信息，请阅读规范）
+    // analyser.fftSize = 64;
+    // frequencyBinCount 告诉您从分析仪接收的值的数量
+    var frequencyData = new Uint8Array(analyserH.frequencyBinCount);
+        
+    // 我们已准备好接收一些数据！
+    var canvas = document.getElementById('canvas'),
+        cwidth = canvas.width,
+        cheight = canvas.height - 2,
+        meterWidth = 1, //频谱中的米宽
+        gap = 7, //频率高度颜色调节
+        capHeight = 1,//帽子高度
+        capStyle = '#000',
+        spacing = 2,//间距
+        //计数
+        meterNum = cwidth / (meterWidth + (spacing-2)), 
+            
+        capYPositionArray = []; ////存储前一帧的大写字母的垂直位置
+    ctx = canvas.getContext('2d'),
+    gradient = ctx.createLinearGradient(0, 0, 0, cheight+2);
+    gradient.addColorStop(1, '#00f7ff');
+    gradient.addColorStop(0.9, '#18ff05');
+    gradient.addColorStop(0.7, '#c4ff00');
+    
+    gradient.addColorStop(0.5, '#ffff04');
+    gradient.addColorStop(0, '#ff0404');
+    // loop
+    function renderFrame() {
+        var array = new Uint8Array(analyserH.frequencyBinCount);
+        analyserH.getByteFrequencyData(array);
+        var step = Math.round(array.length * .68 / meterNum); //从总数组中抽取有限数据
+        ctx.clearRect(0, 0, cwidth, cheight);
+        for(var i = 0; i < meterNum; i++) {
+            var value = array[i * step];
+            if(capYPositionArray.length < Math.round(meterNum)) {
+                capYPositionArray.push(value);
+            };
+            ctx.fillStyle = capStyle;
+            //绘制帽子，具有过渡效果
+            if(value < capYPositionArray[i]) {
+                ctx.fillRect(i * spacing, cheight - (--capYPositionArray[i]) / gap, meterWidth, capHeight);
+            } else {
+                ctx.fillRect(i * spacing, cheight - value / gap, meterWidth, capHeight);
+                capYPositionArray[i] = value;
+            };
+            ctx.fillStyle = gradient; //将filllStyle设置为渐变以获得更好的外观
+            ctx.fillRect(i * spacing /*meterWidth+gap*/ , cheight - value / gap + capHeight, meterWidth, cheight); //the meter
+        }
+        requestAnimationFrame(renderFrame);
+    }
+    renderFrame();
+  
+  
+  
+  
+  
 </script>
 </html>
