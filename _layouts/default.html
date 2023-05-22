@@ -333,7 +333,9 @@
             cxt.beginPath();
             cxt.lineWidth = 1;
 //             cxt.moveTo(110, 110);
-            cxt.moveTo(Math.cos((i * 0.5 + 90) / 180 * Math.PI) * 60 + 80 , (- Math.sin((i * 0.5 + 90) / 180 * Math.PI) * 60 + 80));
+            cxt.moveTo((- Math.sin((i * 0.5 + 90) / 180 * Math.PI) * 60 + 80),Math.cos((i * 0.5 + 90) / 180 * Math.PI) * 60 + 80);
+          console.log(i)
+          console.log((- Math.sin((i * 0.5 + 90) / 180 * Math.PI) * 60 + 80),Math.cos((i * 0.5 + 90) / 180 * Math.PI) * 60 + 80)
             cxt.lineTo(Math.cos((i * 0.5 + 90) / 180 * Math.PI) * (60 + value) + 110, (- Math.sin((i * 0.5 + 90) / 180 * Math.PI) * (60 + value) + 110));
             cxt.stroke();
             //绘制右半边
