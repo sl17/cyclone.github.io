@@ -1135,9 +1135,7 @@ table tfoot td {
 }
 
 .contact ul li a {
-  /*color: #515151;*/
-	    filter: invert(100%);
-    mix-blend-mode: difference;
+  color: #515151;
   display: block;
   padding: 5px;
   font-size: 18px;
