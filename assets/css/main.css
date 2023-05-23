@@ -1737,7 +1737,7 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
 }
 }
 #btn1,#btn,#btn3,#btn4{
-    background: #fff;
+    background: transparent;
     border: 1px solid #6d6d6d;
     border-radius: 4px;
 }
@@ -1755,9 +1755,9 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
 
 /* 列表 */
 #btn4 div span.list {
-    border-top: 2px solid #333;
-    border-bottom: 2px solid #333;
-    background-image: linear-gradient(0, transparent 2px, #333 2px 4px, transparent 4px);
+    border-top: 2px solid #ea72d3;
+    border-bottom: 2px solid #f190ff;
+    background-image: linear-gradient(0, transparent 2px, #ab96ff 2px 4px, transparent 4px);
 }
 
 /* random  随机 */
