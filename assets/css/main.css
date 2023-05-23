@@ -1123,6 +1123,8 @@ table tfoot td {
   padding: 0;
   list-style: none;
   text-align: center;
+filter: invert(100%);
+    mix-blend-mode: difference;
 }
 
 .contact ul li {
@@ -1553,7 +1555,7 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
             justify-content: space-between;
     width: 100%;
     padding: 10px;
-    background-color: rgba(255,255,255,.9);
+    /*background-color: rgba(255,255,255,.9);*/
     -webkit-box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.15);
             box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.15);
   }
