@@ -1011,7 +1011,9 @@ table tfoot td {
   padding-bottom: 15px;
   font-size: 16px;
   text-transform: uppercase;
-  color: #333030;
+  /*color: #333030;*/
+	    filter: invert(100%);
+    mix-blend-mode: difference;
   font-weight: 700;
 }
 
@@ -1034,6 +1036,8 @@ table tfoot td {
 .about p {
   font-size: 16px;
   margin: 0 0 10px;
+	filter: invert(100%);
+    mix-blend-mode: difference;
 }
 .about a.tag {
   text-decoration: none;
@@ -1074,7 +1078,9 @@ table tfoot td {
 
 .contact .contact-title {
   position: relative;
-  color: #333030;
+  /*color: #333030;*/
+	    filter: invert(100%);
+    mix-blend-mode: difference;
   font-weight: 400;
   font-size: 12px;
   margin: 0 0 5px;
@@ -1129,7 +1135,9 @@ table tfoot td {
 }
 
 .contact ul li a {
-  color: #515151;
+  /*color: #515151;*/
+	    filter: invert(100%);
+    mix-blend-mode: difference;
   display: block;
   padding: 5px;
   font-size: 18px;
