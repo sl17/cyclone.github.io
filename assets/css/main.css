@@ -1156,6 +1156,10 @@ footer .copyright {
   text-align: center;
   margin: 0;
 }
+footer .copyright p{
+    filter: invert(100%);
+    mix-blend-mode: difference;
+}
 
 .post {
   width: 100%;
