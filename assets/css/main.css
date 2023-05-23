@@ -1777,7 +1777,7 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
     left: 0;
     height: 10px;
     width: 12px;
-    background-image: linear-gradient(-39deg, transparent 37%, #fff 35% 43%, #fe776a 43% 57%, #fff 58% 62%, transparent 62%);
+    background-image: linear-gradient(-39deg, transparent 43%, #fe776a 43% 57%, #transparent 58%);
 }
 
 #btn4 div span.random::before {
