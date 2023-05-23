@@ -1762,7 +1762,7 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
 
 /* random  随机 */
 #btn4 div span.random {
-    background-image: linear-gradient(39deg, transparent 42%, #333 42% 57%, transparent 59%);
+    background-image: linear-gradient(39deg, transparent 42%, #64c5f6 42% 57%, transparent 59%);
     position: relative;
     overflow: hidden;
 }
@@ -1775,7 +1775,7 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
     left: 0;
     height: 10px;
     width: 12px;
-    background-image: linear-gradient(-39deg, transparent 37%, #fff 35% 41%, #333 45% 57%, #fff 58% 64%, transparent 64%);
+    background-image: linear-gradient(-39deg, transparent 37%, #fff 35% 43%, #fe776a 43% 57%, #fff 58% 62%, transparent 62%);
 }
 
 #btn4 div span.random::before {
@@ -1784,8 +1784,8 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
     display: inline-block;
     height: 13px;
     width: 12px;
-    border-top: 2px solid #333;
-    border-right: 3px solid #333;
+    border-top: 2px solid #fe776a;
+    border-right: 3px solid #64c5f6;
     transform: rotate(37deg) skewX(-9deg);
     left: 1px;
     top: -1px;
