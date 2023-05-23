@@ -969,7 +969,7 @@ table tfoot td {
   width: 240px;
   height: 100%;
   padding: 20px 10px;
-  background-color: rgba(255,255,255);
+  /*background-color: rgba(255,255,255);*/
 }
 
 .about {
@@ -1040,15 +1040,17 @@ table tfoot td {
   font-size: 10px;
   padding: 5px 10px;
   margin-left: 5px;
-  color: #263959;
+  filter: invert(100%);
+  mix-blend-mode: difference;
+  /*color: #263959;*/
   text-transform: uppercase;
-  border: 1px solid #263959;
+  /*border: 1px solid #263959;*/
 }
-.about a.tag:hover {
+/*.about a.tag:hover {
    color: #fff;
    background: -webkit-linear-gradient(-30deg,#1f6c85, #001c24);
    background: linear-gradient(-30deg,#1f6c85, #001c24);
-}
+}*/
 .content-box {
   padding: 20px;
   padding-left: 260px;
@@ -1708,11 +1710,13 @@ xmp{background: rgba(0,0,0,.1);color: #0ba542;border-radius: 5px;font-family: un
 	position: absolute;
 	display: inline-block;
 	top: 0px;
-	background: -webkit-linear-gradient(-70deg, #fc6363 0%, #df03ff 50%,#70b5fa 100%);
+	filter: invert(100%);
+            mix-blend-mode: difference;
+	/*background: -webkit-linear-gradient(-70deg, #fc6363 0%, #df03ff 50%,#70b5fa 100%);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
-	-webkit-box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;*/
 	animation: 6s scrollText linear infinite normal;
 }
 
