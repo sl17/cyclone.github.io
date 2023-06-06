@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: '2019-01-20 13:32:20 +0300'
+date: '2018-01-20 13:32:20 +0300'
 tags:
   - ES6
 ---
