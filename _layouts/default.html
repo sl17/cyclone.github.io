@@ -330,7 +330,9 @@
         analyser.getByteFrequencyData(output);//获取频域数据
         cxt.clearRect(0, 0, wrap.width, wrap.height);
         //var gradient = cxt.createLinearGradient(40, 40, 180, 180);
-        var gradient = cxt.createLinearGradient(40, 40, 180, 180);
+        //var gradient = cxt.createLinearGradient(40, 40, 180, 180);
+        var gradient = cxt.createConicGradient(0, 180, 180);
+      
         gradient.addColorStop("0.1", nColorList[0]);
         gradient.addColorStop("0.4", nColorList[1]);
         gradient.addColorStop("0.5", nColorList[2]);
