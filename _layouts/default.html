@@ -392,11 +392,10 @@
         meterNum = cwidth / (meterWidth + (spacing - 2)),//计数
         capYPositionArray = []; ////存储前一帧的大写字母的垂直位置
     // loop
-    function renderFrame(DOM,color) {
-      // return function(DOM,color){
+    (function renderFrame(DOM,color) {
         var ctx = DOM.getContext('2d'),
         gradient = ctx.createLinearGradient(0, 0, 0, cheight + 2);
-        gradient.addColorStop(1,color );
+        gradient.addColorStop(1,'#fe6864' );
         gradient.addColorStop(0.8, '#fff');
         var array = new Uint8Array(analyser.frequencyBinCount);
         analyser.getByteFrequencyData(array);
@@ -418,15 +417,8 @@
             ctx.fillStyle = gradient; //将filllStyle设置为渐变以获得更好的外观
             ctx.fillRect(i * spacing /*meterWidth+gap*/, cheight - value / gap + capHeight, meterWidth, cheight); //the meter
         }
-        requestAnimationFrame(renderFrame(DOM,color));
-      // }
-    };
-    renderFrame(canvas,'#fe6864')
-    renderFrame(canvas2,'#fda380')
-    renderFrame(canvas3,'#ec7fcc')
-    renderFrame(canvas4,'#ba89ff')
-    renderFrame(canvas5,'#1cedf7')
-    renderFrame(canvas6,'#0292fd')
+        requestAnimationFrame(renderFrame);
+    })();
   
     (function renderFrame2() {
         var ctx = canvas2.getContext('2d'),
@@ -454,7 +446,7 @@
             ctx.fillRect(i * spacing /*meterWidth+gap*/, cheight - value / gap + capHeight, meterWidth, cheight); //the meter
         }
         requestAnimationFrame(renderFrame2);
-    });
+    })();
     (function renderFrame3() {
         var ctx = canvas3.getContext('2d'),
         gradient = ctx.createLinearGradient(0, 0, 0, cheight + 2);
@@ -481,7 +473,7 @@
             ctx.fillRect(i * spacing /*meterWidth+gap*/, cheight - value / gap + capHeight, meterWidth, cheight); //the meter
         }
         requestAnimationFrame(renderFrame3);
-    });
+    })();
     (function renderFrame4() {
         var ctx = canvas4.getContext('2d'),
         gradient = ctx.createLinearGradient(0, 0, 0, cheight + 2);
@@ -508,7 +500,7 @@
             ctx.fillRect(i * spacing /*meterWidth+gap*/, cheight - value / gap + capHeight, meterWidth, cheight); //the meter
         }
         requestAnimationFrame(renderFrame4);
-    });
+    })();
     (function renderFrame5() {
         var ctx = canvas5.getContext('2d'),
         gradient = ctx.createLinearGradient(0, 0, 0, cheight + 2);
@@ -535,7 +527,7 @@
             ctx.fillRect(i * spacing /*meterWidth+gap*/, cheight - value / gap + capHeight, meterWidth, cheight); //the meter
         }
         requestAnimationFrame(renderFrame5);
-    });
+    })();
     (function renderFrame6() {
         var ctx = canvas6.getContext('2d'),
         gradient = ctx.createLinearGradient(0, 0, 0, cheight + 2);
@@ -562,6 +554,6 @@
             ctx.fillRect(i * spacing /*meterWidth+gap*/, cheight - value / gap + capHeight, meterWidth, cheight); //the meter
         }
         requestAnimationFrame(renderFrame6);
-    });
+    })();
 </script>
 </html>
