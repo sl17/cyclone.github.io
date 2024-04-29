@@ -40,5 +40,3 @@ tags:
 ```
 this.$refs.inputer.dispatchEvent(new MouseEvent('click'))
 ```
-
-
