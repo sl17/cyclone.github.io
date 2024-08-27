@@ -12,7 +12,6 @@ tags:
 
 ### 父组件
 
-
 ```
 <template>
   <Test v-model="ruleForm"></Test>
